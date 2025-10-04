@@ -136,6 +136,8 @@ class headerBar extends HTMLElement {
       }
       header.header .iconography .name{
         color: var(--primary-green);
+        font-size: 1.5rem;
+        font-family: 'Roboto Slab', serif;
       }
       header.header .iconography .logo img{
         max-height: calc(var(--header-height) - 20px);
