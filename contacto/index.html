@@ -89,11 +89,19 @@
             >
               <label>
                 Tu nombre:
-                <input type="name" name="name" required >
+                <input 
+                type="name" 
+                name="name" 
+                placeholder="Tu nombre"
+                required >
               </label>
               <label>
                 Correo electr&oacute;nico:
-                <input type="email" name="email" required >
+                <input 
+                type="email" 
+                name="email" 
+                placeholder="ejemplo@email.com"
+                required >
               </label>
               <label>
                 Mensaje:
@@ -120,5 +128,6 @@
     <my-legalfooter></my-legalfooter>
 
   </body>
-
+    <!-- Importing the logic to sanitize the inputs -->
+    <script src="assets/js/contact.js"></script>
 </html>
