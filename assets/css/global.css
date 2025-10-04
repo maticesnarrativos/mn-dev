@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+--primary-text-color-light: #222429;
+--primary-text-color-dark: #f5f3f1;
+
+--primary-background-color-light: #f5f3f1;
+--primary-background-color-dark: #222429;
+
+--primary-blue: #0870d8;
+--primary-green: #51ad87;
+
+--secondary-blue: #0870d8d7;
+--secondary-green: #51ad87cb;
+
+--secondary-text-color-light: #282c34;
+--secondary-text-color-dark: #ffffff;
+
+--secondary-background-color-light: #ffffff;
+--secondary-background-color-dark: #282c34;
+
+--header-height: 100px
+}
+body,
+html {
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+
+/* Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--primary-text-color-dark); /* your track color */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary-green); /* your thumb color */
+  border-radius: 10px;
+}
+
+/* Firefox */
+/* body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-green) var(--primary-text-color-dark);
+}
+ 
+/* All the color must be defined here */
+@media (prefers-color-scheme: dark) {
+  header.header,
+  footer.footer{
+    background-color: var(--primary-background-color-dark);
+    color: var(--primary-text-color-dark);
+  }
+  .App,
+  a{
+    color: var(--primary-text-color-dark);
+  }
+  .main-section{
+    background-color: var(--secondary-background-color-dark);
+    color: var(--secondary-text-color-dark);
+  }
+}
+@media (prefers-color-scheme: light) {
+  header.header,
+  footer.footer{
+    background-color: var(--primary-background-color-light);
+    color: var(--primary-text-color-light);
+  }
+  .App,
+  a{
+    color: var(--primary-text-color-light);
+  }
+  .main-section{
+    background-color: var(--secondary-background-color-light);
+    color: var(--secondary-text-color-light);
+  }
+}
