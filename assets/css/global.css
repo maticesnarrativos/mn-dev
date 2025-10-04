@@ -50,32 +50,46 @@ body::-webkit-scrollbar-thumb {
  
 /* All the color must be defined here */
 @media (prefers-color-scheme: dark) {
-  header.header,
-  footer.footer{
-    background-color: var(--primary-background-color-dark);
-    color: var(--primary-text-color-dark);
-  }
   .App,
   a{
     color: var(--primary-text-color-dark);
   }
-  .main-section{
+  main{
     background-color: var(--secondary-background-color-dark);
     color: var(--secondary-text-color-dark);
   }
 }
 @media (prefers-color-scheme: light) {
-  header.header,
-  footer.footer{
-    background-color: var(--primary-background-color-light);
-    color: var(--primary-text-color-light);
-  }
   .App,
   a{
     color: var(--primary-text-color-light);
   }
-  .main-section{
+  main{
     background-color: var(--secondary-background-color-light);
     color: var(--secondary-text-color-light);
   }
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main{
+  flex-grow: 1;
+  width: 100%;
+}
+.main-section{
+  flex-grow: 1;
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.catalogo-iframe{
+  width: 100%;
+  height: calc(100vh - 150PX);
+  border: none;
+  margin: 20px;
 }
