@@ -1,0 +1,31 @@
+name: "Deploy to GitHub Pages"
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run linter
+        run: echo "Linting code..." # Replace with actual linting command
+
+  deploy:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Log testing message
+        run: echo "testing"
+
+      # Uncomment the following steps after verifying the log works
+      # - name: Copy code to gh-pages branch
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: .
+      #     publish_branch: gh-pages
