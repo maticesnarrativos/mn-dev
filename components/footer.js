@@ -53,9 +53,9 @@ class footerBar extends HTMLElement {
             <h4>Informaci&oacute;n de Contacto</h4>
             <ul class="icon-list">
               <li class="icon-list-item">
-                <a href="tel:+50688566678">
+                <a href="https://wa.me/50688566678" target="_blank" rel="noopener noreferrer">
                   <span class="icon-list-item-icon">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
                   </span >
                   <span class="icon-list-item-text">
                     Tel&eacute;fono: +506 88566678

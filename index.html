@@ -57,7 +57,7 @@
       logoTitle = ""
       link1=""
       
-      link2=""
+      link2="productos/"
       link2Text="Productos"
       link3="catalogo/"
       link3Text="Cat&aacute;logo"
@@ -67,7 +67,15 @@
 
     <main>
       <section  class="main-section">
-
+        <div class="home-main-container">
+          <div class="expl-section">
+            <div class="expl-section-highlight"></div>
+            <div class="expl-section-carousel swipper"></div>
+          </div>
+            <div class="products-grid">
+              <!-- Products will be loaded here dynamically -->
+            </div>
+        </div>
       </section>
     </main>
     
@@ -82,6 +90,18 @@
       link2Text="Contacto"
     ></my-footer>
     <my-legalfooter></my-legalfooter>
+
+    
+    <div id="product-modal" class="product-modal" style="display:none;">
+      <div class="product-modal-content">
+        <span class="product-modal-close">&times;</span>
+        <div class="product-modal-body"></div>
+      </div>
+    </div>
+
+    
+    <!-- Importing the logic for the products grid -->
+    <script src="assets/js/products.js" data-products="assets/json/highlight-products.json"></script>
 
     <!-- Importing the logic for the pagination -->
     <!-- <script src="./index.js"></script> -->

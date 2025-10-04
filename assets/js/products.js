@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch('assets/json/products.json')
+  const scriptTag = document.currentScript || document.querySelector('script[src*="products.js"]');
+  const productsFile = scriptTag.getAttribute('data-products') || 'assets/json/products.json';
+
+  fetch(productsFile)
     .then(res => res.json())
     .then(products => {
       const grid = document.querySelector('.products-grid');
