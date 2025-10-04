@@ -2,6 +2,15 @@
 <html lang="en">
 
   <head>
+    <script>
+      // If running on GitHub Pages, set base to /mn-dev/
+      if (window.location.hostname === "maticesnarrativos.github.io") {
+        document.write('<base href="/mn-dev/">');
+      }else{
+        document.write('<base href="/">');
+      }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="description" content="Pagina principal de Matices Narrativos">
     <meta name="owner" content="Matices Narrativos">
@@ -20,15 +29,15 @@
 
     <!-- responsive design patterns, mobile firts, then tablet and last dekstop,
     the best practice is to create different .css files for each one -->
-    <link rel="stylesheet" href="./assets/css/global.css">
-    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" >
 
-    <script src="./components/header.js"></script>
-    <script src="./components/footer.js"></script>
-    <script src="./components/legalFooter.js"></script>
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="components/legalFooter.js"></script>
 
     <!-- usign image for favicon icon -->
-    <link rel="shortcut icon" href="./assets/media/img/logo_white_background.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/media/img/logo_white_background.png" type="image/x-icon">
 
     <!-- documents for swipper js -->
     <link
@@ -43,16 +52,16 @@
 
   <body class="App">
     <my-header
-      logo="./assets/media/img/logo_white_background.png"
+      logo="assets/media/img/logo_white_background.png"
       logoAlt="Matices Narrativos. Aromatherapy, health and relaxation"
       logoTitle = ""
-      link1="./"
+      link1=""
       
-      link2="../"
+      link2=""
       link2Text="Home"
-      link3="../catalogo/"
+      link3="catalogo/"
       link3Text="Cat&aacute;logo"
-      link4="../contacto/"
+      link4="contacto/"
       link4Text="Cont&aacute;cto"
     ></my-header>
 
@@ -63,13 +72,13 @@
     </main>
     
     <my-footer
-      logo="./assets/media/img/logo_white_background.png"
+      logo="assets/media/img/logo_white_background.png"
       logoAlt="Matices Narrativos. Aromatherapy, health and relaxation"
       logoTitle = ""
       
       link1="#"
       link1Text="Home"
-      link2="../contacto/"
+      link2="contacto/"
       link2Text="Contacto"
     ></my-footer>
     <my-legalfooter></my-legalfooter>
