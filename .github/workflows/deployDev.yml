@@ -19,13 +19,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Log testing message
-        run: echo "testing"
-
-      # Uncomment the following steps after verifying the log works
-      # - name: Copy code to gh-pages branch
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: .
-      #     publish_branch: gh-pages
+      - name: Copy code to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
