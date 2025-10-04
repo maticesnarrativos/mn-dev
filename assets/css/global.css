@@ -141,7 +141,7 @@ main{
   transition: box-shadow 0.2s;
 }
 .product-tile:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+  box-shadow: 5px 5px 15px var(--primary-green);
 }
 .product-tile img {
   max-width: 100%;
@@ -193,6 +193,9 @@ main{
   color: #888;
   cursor: pointer;
   z-index: 10;
+}
+.product-modal-close:hover {
+  color: var(--primary-green);
 }
 .product-modal-body img {
   max-width: 100%;
