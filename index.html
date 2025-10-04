@@ -25,6 +25,7 @@
 
     <script src="./components/header.js"></script>
     <script src="./components/footer.js"></script>
+    <script src="./components/legalFooter.js"></script>
 
     <!-- usign image for favicon icon -->
     <link rel="shortcut icon" href="./assets/media/img/logo_white_background.png" type="image/x-icon">
@@ -36,14 +37,6 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-      // If running on GitHub Pages, set base to /mn-dev/
-      if (window.location.hostname === "maticesnarrativos.github.io") {
-        document.write('<base href="/mn-dev/">');
-      }
-    </script>
-
 
     <title>Matices Narrativos</title>
   </head>
@@ -74,12 +67,12 @@
       logoAlt="Matices Narrativos. Aromatherapy, health and relaxation"
       logoTitle = ""
       
-      link1="../"
+      link1="#"
       link1Text="Home"
       link2="../contacto/"
       link2Text="Contacto"
     ></my-footer>
-    
+    <my-legalfooter></my-legalfooter>
 
     <!-- Importing the logic for the pagination -->
     <!-- <script src="./index.js"></script> -->
