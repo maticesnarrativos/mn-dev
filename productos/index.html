@@ -12,10 +12,11 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="description" content="Pagina de contacto de Matices Narrativos">
+    <meta name="description" content="Pagina de productos de Matices Narrativos">
     <meta name="owner" content="Matices Narrativos">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <!-- responsive design patterns, mobile firts, then tablet and last dekstop,
     the best practice is to create different .css files for each one -->
@@ -29,7 +30,7 @@
     <!-- usign image for favicon icon -->
     <link rel="shortcut icon" href="assets/media/img/logo_white_background.png" type="image/x-icon">
 
-    <title>Cont&aacute;cto</title>
+    <title>Productos</title>
   </head>
 
   <body class="App">
@@ -43,13 +44,21 @@
       link2Text="Productos"
       link3="catalogo/"
       link3Text="Cat&aacute;logo"
-      link4="#"
+      link4="contacto/"
       link4Text="Cont&aacute;cto"
     ></my-header>
 
     <main>
-      <section class="main-section">
-
+      <section  class="main-section">
+        <div class="products-main-container">
+          <div class="filter-sort-container">
+            <div class="filter-sort-container-filter"></div>
+            <div class="filter-sort-container-sort"></div>
+            <div class="products-grid">
+              <!-- Products will be loaded here dynamically -->
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     
@@ -60,11 +69,20 @@
       
       link1=""
       link1Text="Inicio"
-      link2= "#"
+      link2="contacto/"
       link2Text="Contacto"
     ></my-footer>
     <my-legalfooter></my-legalfooter>
 
+    <div id="product-modal" class="product-modal" style="display:none;">
+      <div class="product-modal-content">
+        <span class="product-modal-close">&times;</span>
+        <div class="product-modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Importing the logic for the pagination -->
+    <script src="assets/js/products.js"></script>
   </body>
 
 </html>
