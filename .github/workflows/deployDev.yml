@@ -9,15 +9,25 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Run linter
-        run: echo "Linting code..." # Replace with actual linting command
+        run: npm run lint # Run your linter command here
+      - name: Lint passed
+        if: ${{ success() }}
+        run: echo "Lint passed successfully!"
 
-  deploy:
-    needs: lint
+  sonar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - name: Run SonarQube analysis
+        run: echo "Running SonarQube analysis..." # Replace with actual SonarQube command
+
+  deploy:
+    needs: [lint, sonar]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
       - name: Copy code to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
