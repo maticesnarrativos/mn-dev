@@ -3,6 +3,7 @@ class headerBar extends HTMLElement {
     super();
 
     this.attachShadow({mode:"open"});
+    this.menuOpen = false;
   }
 
   static get observedAttributes(){
@@ -30,10 +31,19 @@ class headerBar extends HTMLElement {
       this.link2 = newVal;
     }
     if (attr === "link2Text") {
-      this.link2 = newVal;
+      this.link2Text = newVal;
+    }
+    if (attr === "link3") {
+      this.link3 = newVal;
     }
     if (attr === "link3Text") {
-      this.link3 = newVal;
+      this.link3Text = newVal;
+    }
+    if (attr === "link4") {
+      this.link4 = newVal;
+    }
+    if (attr === "link4Text") {
+      this.link4Text = newVal;
     }
   }
 
@@ -51,6 +61,11 @@ class headerBar extends HTMLElement {
             </div>
           </div>
         </a>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav>
           <ul class="nav">
               <li><a href="${this.getAttribute("link2")}" title="${this.getAttribute("link2Text")}">${this.getAttribute("link2Text")}</a></li>
@@ -93,7 +108,6 @@ class headerBar extends HTMLElement {
           color: var(--primary-text-color-light);
         }
       }
-      /* Start header styles */
       header.header {
         display: flex;
         justify-content: space-between;
@@ -102,8 +116,8 @@ class headerBar extends HTMLElement {
         padding: 1em 5%;
         min-height: 80px;
         max-height: var(--header-height);
+        position: relative;
       }
-
       header.header .iconography {
         display: flex;
         align-items: center;
@@ -111,11 +125,9 @@ class headerBar extends HTMLElement {
       header.header .iconography-link{
         text-decoration: none;
       }
-
       header.header .iconography div:first-child {
         margin-right: 5%;
       }
-
       header.header .iconography .logo,
       header.header .iconography .name{
         height: 100%;
@@ -128,32 +140,89 @@ class headerBar extends HTMLElement {
       header.header .iconography .logo img{
         max-height: calc(var(--header-height) - 20px);
       }
-
       header.header nav{
         /* margin-right: 5%; */
       }
-
       header.header nav .nav {
         display: flex;
         list-style: none;
       }
-
       header.header nav .nav li a{
         font-size: 1rem;
         text-decoration: none;
         padding: 8px 19px;
       }
-
       header.header nav .nav li a:hover{
         background-color: var(--primary-green);
         border-radius: 30px;
         box-shadow: -5px 5px 3px var(--secondary-green);
         transition: all .2s linear;
       }
-      /* End header styles */
-
-      @media (min-width: 768px){
-      /* Start header styles */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+        position: relative;
+      }
+      .hamburger span {
+        display: block;
+        width: 28px;
+        height: 4px;
+        margin: 4px 0;
+        background: var(--primary-green);
+        border-radius: 2px;
+        transition: all 0.3s;
+        position: relative;
+      }
+      /* Hamburger to X animation */
+      .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+      }
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(10px, -10px);
+      }
+      @media (max-width: 768px) {
+        header.header nav {
+          position: absolute;
+          top: -100%;
+          right: 0;
+          left: 0;
+          background: inherit;
+          z-index: 1;
+        }
+        header.header nav .nav {
+          flex-direction: column;
+          background: inherit;
+          width: 100%;
+          overflow: hidden;
+          transition: max-height 0.3s ease;
+        }
+        header.header nav.open {
+          top: 100px;
+          min-height: calc(100vh - 100px);
+          overflow: visible;
+          border-bottom: 1px solid var(--primary-green);
+        }
+        .hamburger {
+          display: flex;
+        }
+      }
+      @media (max-width: 350px) {
+        header.header .iconography .name{
+          display: none;
+        }
+      }
+      @media (min-width: 769px){
         header.header nav .nav {
           flex-direction: row;
         }
@@ -162,7 +231,6 @@ class headerBar extends HTMLElement {
           text-decoration: none;
           padding: 8px 29px;
         }
-        /* End header styles */
       }
       </style>
     `;
@@ -173,6 +241,20 @@ class headerBar extends HTMLElement {
     //Donde agregamos nuestro template ya que lo estabamos agregando al dom global
     //Ahora debemos agregarlo en nuestro shadow dom que es otro contexto diferente
     this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true))
+    this.addHamburgerListener();
+  }
+
+  addHamburgerListener() {
+    const hamburger = this.shadowRoot.querySelector('.hamburger');
+    const navList = this.shadowRoot.querySelector('nav');
+    if (hamburger && navList) {
+      hamburger.addEventListener('click', () => {
+        console.log('click');
+        const isOpen = navList.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
   }
 
   //*Esto es lo que agregará cosas al DOM
