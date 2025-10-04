@@ -93,3 +93,11 @@ main{
   border: none;
   margin: 20px 0;
 }
+
+.main-section{
+  padding: 2rem 0;
+}
+
+.main-section p{
+  margin: 2rem 0;
+}
