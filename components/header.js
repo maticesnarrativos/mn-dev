@@ -199,6 +199,7 @@ class headerBar extends HTMLElement {
           left: 0;
           background: inherit;
           z-index: 1;
+          visibility: hidden;
         }
         header.header nav .nav {
           flex-direction: column;
@@ -211,7 +212,15 @@ class headerBar extends HTMLElement {
           top: 100px;
           min-height: calc(100vh - 100px);
           overflow: visible;
+          visibility: visible;
           border-bottom: 1px solid var(--primary-green);
+        }
+        header.header nav .nav li{
+          padding: 15px 0;
+          font-size: 2rem;
+        }
+        header.header nav .nav li a{
+          font-size: 2rem;
         }
         .hamburger {
           display: flex;
