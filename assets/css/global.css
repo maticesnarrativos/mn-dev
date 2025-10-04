@@ -221,6 +221,30 @@ main{
   margin: 0.5rem 0;
   text-align: left;
 }
+/* End modal styles */
+/* Start Contact styles */
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contact h2{
+  font-size: 3rem;
+  padding: 2rem;
+  background-color: #000000be;
+  color: #ffffff;
+}
+.contact .contact-info-section{
+  display: flex;
+  margin: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact .contact-info-section-column{
+  margin: 1rem;
+}
+/* End Contact styles */
 
 @media (min-width: 500px) {
   .product-modal-content {
@@ -228,6 +252,7 @@ main{
   }
 }
 @media (min-width: 769px) {
+  /* Start Modal styles */
   .product-modal-body{
     font-size: 1rem;
   }
@@ -240,6 +265,14 @@ main{
   .product-modal-body .product-usemode {
     margin: 0.5rem 5%;
   }
+  /* End modal styles */
+  /* Start Contact styles */
+  .contact .contact-info-section{
+    flex-direction: row;
+  }
+  /* End Contact styles */
 }
 
-/* End modal styles */
+
+
+
