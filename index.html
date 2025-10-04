@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Pagina principal de Matices Narrativos">
+    <meta name="owner" content="Matices Narrativos">
+    <meta name="robots" content="index">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph meta starts -->
+    <meta property="og:title" content="Matices Narrativos">
+    <meta property="og:site_name" content="Matices Narrativos">
+    <meta property="og:url" content="https://github.com/maticesnarrativos/mn-prod">
+    <meta property="og:description" content="Pagina principal de Matices Narrativos">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/media/img/logo_white_background.png">
+    <!-- Open Graph meta ends -->
+
+    <!-- responsive design patterns, mobile firts, then tablet and last dekstop,
+    the best practice is to create different .css files for each one -->
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" >
+
+    <script src="./components/header.js"></script>
+    <script src="./components/footer.js"></script>
+
+    <!-- usign image for favicon icon -->
+    <link rel="shortcut icon" href="./assets/media/img/logo_white_background.png" type="image/x-icon">
+
+    <!-- documents for swipper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <title>Matices Narrativos</title>
+  </head>
+
+  <body>
+    <my-header
+      text = "Portfolio home page"
+      link1 = "./index.html"
+      link2 = "./certifications/index.html"
+      link3 = "./contact/index.html"
+    ></my-header>
+
+    
+    <my-footer
+    link1="https://www.facebook.com/"
+    img1="./images/facebook_logos.png"
+    img1Alt="Logo de Facebook"
+    img1Title = "Facebook Profile Link"
+    
+    link2 = "https://www.linkedin.com/in/johnn-hern%C3%A1ndez-delgado-a974bbb3/"
+    img2 = "./images/linkedin-png-logo-5.png"
+    img2Alt = "Logo de LinkedIn"
+    img2Title = "LinkedIn profile link"
+    ></my-footer>
+    
+
+    <!-- Importing the logic for the pagination -->
+    <!-- <script src="./index.js"></script> -->
+  </body>
+
+</html>
