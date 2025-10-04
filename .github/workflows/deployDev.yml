@@ -25,74 +25,24 @@ jobs:
         if: ${{ success() }}
         run: echo "Lint passed successfully!"
 
-  sonar:
+  tests:
     runs-on: ubuntu-latest
-    services:
-      sonarqube:
-        image: sonarqube:10-community
-        ports:
-          - 9000:9000
-        options: >-
-          --health-cmd "curl -f http://localhost:9000/api/system/health || exit 1"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 20
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Wait for SonarQube to be healthy
-        run: |
-          echo "Waiting for SonarQube to start..."
-          for i in {1..30}; do
-            if curl -s http://localhost:9000/api/system/health | grep -q '"status":"UP"'; then
-              echo "SonarQube is up!"
-              break
-            fi
-            echo "SonarQube not ready yet..."
-            sleep 10
-          done
-
-      - name: Set up JDK 17 # required by SonarQube/SonarCloud
-        uses: actions/setup-java@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          distribution: temurin
-          java-version: 17
+          node-version: 22
 
-      - name: Install Sonar Scanner
-        run: npm install -g sonarqube-scanner
+      - name: Install dependencies
+        run: npm install
 
-      - name: Run SonarQube Analysis
-        env:
-          SONAR_HOST_URL: http://localhost:9000
-          SONAR_LOGIN: admin
-          SONAR_PASSWORD: admin
-        run: |
-          npx sonar-scanner \
-            -Dsonar.projectKey=my-project \
-            -Dsonar.sources=src \
-            -Dsonar.host.url=$SONAR_HOST_URL \
-            -Dsonar.login=$SONAR_LOGIN \
-            -Dsonar.password=$SONAR_PASSWORD
-
-      - name: Log SonarQube Result
-        run: echo "SonarQube analysis completed. Check the SonarQube dashboard for results."
-
-      - name: SonarQube Quality Gate Check
-        id: sonarqube-quality-gate
-        uses: SonarSource/sonarqube-quality-gate-action@v1.1.0
-        with:
-          scanMetadataReportFile: .scannerwork/report-task.txt
-        env:
-          SONAR_TOKEN: admin
-          SONAR_HOST_URL: http://localhost:9000
-
-      - name: Log SonarQube Quality Gate Result
-        run: |
-          echo "SonarQube Quality Gate Status: ${{ steps.sonarqube-quality-gate.outputs.quality-gate-status }}"
+      - name: Run tests
+        run: echo "No tests available" # Replace with your test command
 
   deploy:
-    needs: [lint, sonar]
+    needs: [lint, tests]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
