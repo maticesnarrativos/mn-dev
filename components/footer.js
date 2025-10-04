@@ -73,7 +73,7 @@ class footerBar extends HTMLElement {
             <h4>T&eacute;rminos y Condiciones</h4>
             <ul class="text-list">
               <li><a href="${this.getAttribute("link1")}" title="${this.getAttribute("link1Text")}">${this.getAttribute("link1Text")}</a></li>
-              <li><a href="/contacto/" title="Cont&aacute;cto">Cont&aacute;cto</a></li>
+              <li><a href="${this.getAttribute("link2")}" title="${this.getAttribute("link2Text")}">${this.getAttribute("link2Text")}</a></li>
             </ul>
           </div>
           <div class="column social">
