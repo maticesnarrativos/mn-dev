@@ -31,7 +31,11 @@
   text-decoration: none;
   margin: 0.5rem 0;
 }
-
+.contact .contact-form-section{
+  width: 100%;
+  max-width: 800px;
+  align-self: center;
+}
 .contact .contact-form-section form,
 .contact .contact-form-section form label{
   display: flex;
