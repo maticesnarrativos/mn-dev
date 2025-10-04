@@ -210,7 +210,7 @@ class footerBar extends HTMLElement {
     //Ahora para poder renderizar nuestros templates tenemos que cambiar el contexto
     //Donde agregamos nuestro template ya que lo estabamos agregando al dom global
     //Ahora debemos agregarlo en nuestro shadow dom que es otro contexto diferente
-    this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true))
+    this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true));
   }
 
   //*Esto es lo que agregará cosas al DOM
