@@ -18,7 +18,8 @@
       }
     ], 
     "cost": "₡8290",
-    "date": "2025/10/05"
+    "date": "2025/10/05",
+    "onStock": true
   },
   "2": {
     "name": "Alivio Respiratorio roll-on",
@@ -39,7 +40,8 @@
       }
     ], 
     "cost": "₡8290",
-    "date": "2025/10/05"
+    "date": "2025/10/05",
+    "onStock": true
   },
   "3": {
     "name": "Alivio Respiratorio roll-on",
@@ -60,7 +62,8 @@
       }
     ], 
     "cost": "₡8290",
-    "date": "2025/10/05"
+    "date": "2025/10/05",
+    "onStock": true
   },
   "4": {
     "name": "Alivio Respiratorio roll-on",
@@ -81,6 +84,7 @@
       }
     ], 
     "cost": "₡8290",
-    "date": "2025/10/05"
+    "date": "2025/10/05",
+    "onStock": true
   }
 }
