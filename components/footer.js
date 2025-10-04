@@ -35,8 +35,13 @@ class footerBar extends HTMLElement {
 
   getTemplate(){ //*Esto será puro HTML
     const template = document.createElement('template');
+     // Dynamically set the base path for assets
+    const base =
+      window.location.hostname === "maticesnarrativos.github.io"
+        ? "/mn-dev/"
+        : "/";
     template.innerHTML = `
-      <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+      <link rel="stylesheet" href="${base}assets/css/font-awesome.min.css">
       <footer class="footer">
         <section class="columns">
           <div class="column">
