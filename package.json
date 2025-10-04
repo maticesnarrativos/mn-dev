@@ -4,7 +4,7 @@
   "description": "Matices Narrativos Homepage",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "eslint ."
   },
   "repository": {
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/maticesnarrativos/mn-dev#readme",
   "devDependencies": {
     "@eslint/js": "^9.37.0",
-    "eslint": "^9.37.0"
+    "eslint": "^9.37.0",
+    "jest": "^30.2.0"
   },
   "engines": {
     "node": "22.16.0",

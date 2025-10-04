@@ -38,8 +38,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: echo "No tests available" # Replace with your test command
+      - name: Run tests if any exist
+        run: |
+          if ls **/*.{test,spec}.js 1> /dev/null 2>&1; then
+            echo "Test files found. Running tests..."
+            npm test
+          else
+            echo "No test files found. Skipping tests."
+          fi
 
   deploy:
     needs: [lint, tests]
