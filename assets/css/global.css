@@ -89,7 +89,7 @@ main{
 
 .catalogo-iframe{
   width: 100%;
-  height: calc(100vh - 150PX);
+  height: calc(100vh - 150px);
   border: none;
-  margin: 20px;
+  margin: 20px 0;
 }
