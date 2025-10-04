@@ -2,6 +2,15 @@
 <html lang="en">
 
   <head>
+    <script>
+      // If running on GitHub Pages, set base to /mn-dev/
+      if (window.location.hostname === "maticesnarrativos.github.io") {
+        document.write('<base href="/mn-dev/">');
+      }else{
+        document.write('<base href="/">');
+      }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="description" content="Pagina principal de Matices Narrativos">
     <meta name="owner" content="Matices Narrativos">
@@ -21,13 +30,6 @@
     <!-- usign image for favicon icon -->
     <link rel="shortcut icon" href="../assets/media/img/logo_white_background.png" type="image/x-icon">
 
-    <script>
-    // If running on GitHub Pages, set base to /mn-dev/
-    if (window.location.hostname === "maticesnarrativos.github.io") {
-      document.write('<base href="/mn-dev/">');
-    }
-  </script>
-
     <title>Cont&aacute;cto</title>
   </head>
 
@@ -36,11 +38,11 @@
       logo="../assets/media/img/logo_white_background.png"
       logoAlt="Matices Narrativos. Aromatherapy, health and relaxation"
       logoTitle = ""
-      link1="/"
+      link1=""
       
-      link2="/"
+      link2=""
       link2Text="Home"
-      link3="/catalogo/"
+      link3="catalogo/"
       link3Text="Cat&aacute;logo"
       link4="#"
       link4Text="Cont&aacute;cto"
@@ -57,7 +59,7 @@
       logoAlt="Matices Narrativos. Aromatherapy, health and relaxation"
       logoTitle = ""
       
-      link1="/"
+      link1=""
       link1Text="Home"
       link2= "#"
       link2Text="Contacto"

@@ -2,6 +2,15 @@
 <html lang="en">
 
   <head>
+    <script>
+      // If running on GitHub Pages, set base to /mn-dev/
+      if (window.location.hostname === "maticesnarrativos.github.io") {
+        document.write('<base href="/mn-dev/">');
+      }else{
+        document.write('<base href="/">');
+      }
+    </script>
+
     <meta charset="UTF-8">
     <meta name="description" content="Pagina principal de Matices Narrativos">
     <meta name="owner" content="Matices Narrativos">
@@ -30,13 +39,13 @@
       logo="../assets/media/img/logo_white_background.png"
       logoAlt="Matices Narrativos. Aromatherapy, health and relaxation"
       logoTitle = ""
-      link1="../"
+      link1=""
       
-      link2="../"
+      link2=""
       link2Text="Home"
       link3="#"
       link3Text="Cat&aacute;logo"
-      link4="../contacto/"
+      link4="contacto/"
       link4Text="Cont&aacute;cto"
     ></my-header>
 
@@ -54,9 +63,9 @@
       logoAlt="Matices Narrativos. Aromatherapy, health and relaxation"
       logoTitle = ""
       
-      link1="../"
+      link1=""
       link1Text="Home"
-      link2= "../contacto/"
+      link2= "contacto/"
       link2Text="Contacto"
     ></my-footer>
     <my-legalfooter></my-legalfooter>
