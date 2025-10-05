@@ -92,7 +92,7 @@ class footerBar extends HTMLElement {
                 </a>
               </li>
               <li class="icon-list-item">
-                <a href="https://www.instagram.com/matices.narrativos?utm_source=qr&igsh=dDViYXkzbHEyaHli" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/matices.narrativos" target="_blank" rel="noopener noreferrer">
                   <span class="icon-list-item-icon">
                     <i class="fa fa-instagram"></i>
                   </span >

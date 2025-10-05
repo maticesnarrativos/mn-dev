@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       slide.innerHTML = `
         <div class="swiper-slide--card">
           <div onclick="window.location.href='${item.link}';">
-            <img src="${item.image}" class="item" alt="${item.alt}">
+            <img loading="lazy" src="${item.image}" class="item" alt="${item.alt}">
           </div>
         </div>
       `;
