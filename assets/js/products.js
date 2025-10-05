@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ${imagesHtml}
             <div class="product-title">${product.name || ''}</div>
             <div class="product-collection">${product.collection || ''}</div>
-            <div class="product-cost">${product.cost || ''}</div>
+            <div class="product-cost">Precio: ${product.cost || ''}</div>
           `;
 
           tile.addEventListener('click', () => {
