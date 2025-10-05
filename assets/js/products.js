@@ -145,6 +145,15 @@ document.addEventListener("DOMContentLoaded", () => {
             currentSearch = this.value.trim();
             filterAndRender();
           });
+
+          
+          // Close keyboard on Enter
+          searchInput.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+              e.preventDefault(); // stop form submission if inside a form
+              this.blur();        // remove focus to close mobile keyboard
+            }
+          });
         }
       });
 

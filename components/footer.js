@@ -169,6 +169,7 @@ class footerBar extends HTMLElement {
       footer.footer .column .icon-list-item,
       footer.footer .column .text-list li{
         font-size: 1rem;
+        line-height: 1.5rem;
         transition: all .2s ease-in-out;
       }
       footer.footer .column .icon-list-item:hover,
