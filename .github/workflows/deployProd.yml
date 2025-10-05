@@ -65,7 +65,7 @@ jobs:
           GH_TOKEN: ${{ secrets.DEPLOY_TOKEN }} # Personal Access Token with repo access
         run: |
           git clone --depth=1 https://x-access-token:${GH_TOKEN}@github.com/${DEST_REPO}.git deploy-repo
-          rsync -av --delete --exclude='.git' ./ deploy-repo/
+          rsync -av --delete  --exclude='.git' --exclude='.github/workflows/*' ./ deploy-repo/
           # Replace robots.txt from prod folder
           cp -f ./prod/robots.txt deploy-repo/robots.txt
 
