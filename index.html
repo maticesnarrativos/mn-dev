@@ -12,42 +12,47 @@
     </script>
 
     <meta charset="UTF-8">
-    <meta name="description" content="Pagina principal de Matices Narrativos">
-    <meta name="owner" content="Matices Narrativos">
-    <meta name="robots" content="index">
+    <title>Matices Narrativos | Aromaterapia, Salud y Relajaci&oacute;n</title>
+    <meta name="description" content="Matices Narrativos ofrece productos de aromaterapia, bienestar y relajaci&oacute;n natural. Conoce nuestras colecciones y art&iacute;culos destacados.">
+    <meta name="author" content="Matices Narrativos" />
+    <link rel="canonical" href="https://maticesnarrativos.com/" />
+    <meta name="robots" content="index, follow">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Open Graph meta starts -->
-    <meta property="og:title" content="Matices Narrativos">
-    <meta property="og:site_name" content="Matices Narrativos">
-    <meta property="og:url" content="https://github.com/maticesnarrativos/mn-prod">
-    <meta property="og:description" content="Pagina principal de Matices Narrativos">
+    <meta property="og:title" content="Matices Narrativos | Aromaterapia, Salud y Relajaci&oacute;n">
+    <meta property="og:url" content="https://maticesnarrativos.com/">
+    <meta property="og:description" content="Matices Narrativos ofrece productos de aromaterapia, bienestar y relajaci&oacute;n natural. Conoce nuestras colecciones y art&iacute;culos destacados.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="./assets/media/img/logo_white_background.png">
+    <meta property="og:image" content="assets/media/img/logo_white_background.png">
     <!-- Open Graph meta ends -->
 
-    <!-- responsive design patterns, mobile firts, then tablet and last dekstop,
-    the best practice is to create different .css files for each one -->
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Matices Narrativos | Aromaterapia, Salud y Relajaci&oacute;n" />
+    <meta name="twitter:description" content="Matices Narrativos ofrece productos de aromaterapia, bienestar y relajaci&oacute;n natural. Conoce nuestras colecciones y art&iacute;culos destacados." />
+    <meta name="twitter:image" content="assets/media/img/logo_white_background.png" />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" >
-
-    <script src="components/header.js"></script>
-    <script src="components/footer.js"></script>
-    <script src="components/legalFooter.js"></script>
-
-    <!-- usign image for favicon icon -->
-    <link rel="shortcut icon" href="assets/media/img/logo_white_background.png" type="image/x-icon">
-
-    <!-- documents for swipper js -->
+    
+    <!-- Swiper Styles -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Scripts -->
+    <script defer src="components/header.js"></script>
+    <script defer src="components/footer.js"></script>
+    <script defer src="components/legalFooter.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <title>Matices Narrativos</title>
+    <!-- usign image for favicon icon -->
+    <link rel="shortcut icon" href="assets/media/img/logo_white_background.png" type="image/x-icon">
+
   </head>
 
   <body class="App">
@@ -72,6 +77,7 @@
           <div class="expl-section">
             <div class="expl-section-highlight">
               <img
+                loading="lazy"
                 src="assets/media/banners/gran_rifa.jpeg"
                 alt="Colleci&oacute;n Bienestar"
                 title="Colleci&oacute;n Bienestar"/>
@@ -92,9 +98,9 @@
             <!-- -------------------------Swiper Ends----------------------------------- -->
           </div>
           <div class="home-more-info-section"><!-- 
-            <h3 class="home-more-info-title">Informaci&oacute;n</h3> -->
+            <h2 class="home-more-info-title">Informaci&oacute;n</h2> -->
           </div>
-          <h3 class="home-main-container-title">Productos destacados del mes</h3>
+          <h2 class="home-main-container-title">Productos destacados del mes</h2>
           <!-- -------------------------Products recs swiper start----------------------------------- -->
           <div class="products-recs-section-carousel swiper-recs swiper">
             <!-- Additional required wrapper -->

@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (Array.isArray(product.imgs) && product.imgs.length > 0) {
             imagesHtml = `
               <div class="product-images">
-                <img src="${product.imgs[0].img}" alt="${product.imgs[0].alt || product.name}">
+                <img loading="lazy" src="${product.imgs[0].img}" alt="${product.imgs[0].alt || product.name}">
               </div>
             `;
           }
