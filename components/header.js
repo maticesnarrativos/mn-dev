@@ -228,7 +228,7 @@ class headerBar extends HTMLElement {
           display: flex;
         }
       }
-      @media (max-width: 350px) {
+      @media (max-width: 450px) {
         header.header .iconography .name{
           display: none;
         }
