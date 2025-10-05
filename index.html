@@ -77,41 +77,38 @@
                 title="Colleci&oacute;n Bienestar"/>
             </div>
             <!-- -------------------------Swiper start----------------------------------- -->
-            <div class="expl-section-carousel swiper">
+            <div class="expl-section-carousel swiper-banners swiper">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper" id="banner-swiper-wrapper">
-                <!-- Slides -->
-                <!-- <div class="swiper-slide">
-                  <div class="swiper-slide--card">
-                    <button onclick="window.location.href='productos/?collection=Colección+Bienestar';">
-                      <img src="assets/media/products/coleccion_bienestar/1.coleccion_bienestar-min.jpg" class="banner" alt="Banner con varios productos de la colecci&oacute;n bienestar">
-                    </button>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-slide--card">
-                    <button onclick="window.location.href='productos/?collection=Colección+Bienestar';">
-                      <img src="assets/media/products/coleccion_bienestar/1.coleccion_bienestar-min.jpg" class="banner" alt="Banner con varios productos de la colecci&oacute;n bienestar">
-                    </button>
-                  </div>
-                </div> -->
+                <!-- Dynamic slides -->
               </div>
               <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
+              <div class="swiper-pagination swiper-pagination-banners"></div>
 
               <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev swiper-button-prev-banners"></div>
+              <div class="swiper-button-next swiper-button-next-banners"></div>
             </div>
             <!-- -------------------------Swiper Ends----------------------------------- -->
           </div>
-          <div class="home-more-info-section">
-            <h3 class="home-more-info-title">Informaci&oacute;n</h3>
+          <div class="home-more-info-section"><!-- 
+            <h3 class="home-more-info-title">Informaci&oacute;n</h3> -->
           </div>
           <h3 class="home-main-container-title">Productos destacados del mes</h3>
-          <div class="products-grid">
-            <!-- Products will be loaded here dynamically -->
+          <!-- -------------------------Products recs swiper start----------------------------------- -->
+          <div class="products-recs-section-carousel swiper-recs swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper" id="products-recs-swiper-wrapper">
+              <!-- Dynamic Slides -->
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination swiper-pagination-recs"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev swiper-button-prev-recs"></div>
+            <div class="swiper-button-next swiper-button-next-recs"></div>
           </div>
+          <!-- -------------------------Products recs swiper start----------------------------------- -->
         </div>
       </section>
     </main>
@@ -136,12 +133,10 @@
       </div>
     </div>
 
+    <!-- Importing the logic for the swipers -->
+    <script src="assets/js/swiperSetup.js" data-products="assets/json/home-banners.json" swiper-sufix="banners" wrapper-id="banner-swiper-wrapper"></script>
     
-    <!-- Importing the logic for the products grid -->
-    <script src="assets/js/products.js" data-products="assets/json/highlight-products.json"></script>
-
-    <!-- Importing the logic for the swier -->
-    <script src="assets/js/swiperSetup.js"></script>
+    <script src="assets/js/recsCarousel.js" data-products="assets/json/highlight-products.json" swiper-sufix="recs" wrapper-id="products-recs-swiper-wrapper"></script>
   </body>
   
 </html>

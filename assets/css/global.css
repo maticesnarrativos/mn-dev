@@ -256,15 +256,15 @@ main{
   position: relative;
   margin-right: 0;
 }
-.expl-section .expl-section-highlight img,
-.expl-section .swiper-slide--card,
-.expl-section .swiper-slide--card button,
-.expl-section .swiper-slide--card button img{
+.expl-section-highlight img,
+.swiper-slide--card,
+.swiper-slide--card div,
+.swiper-slide--card div img{
   max-width: 100%;
 }
 
-.expl-section-carousel .swiper-button-next:hover,
-.expl-section-carousel .swiper-button-prev:hover{
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
   color: var(--primary-green);
 }
 
