@@ -21,3 +21,26 @@
   border-color: var(--primary-blue, #0870d8);
   box-shadow: 0 4px 16px rgba(8,112,216,0.13);
 }
+.filter-sort-container-filter select {
+  margin-right: 1em;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  border: 1.5px solid var(--primary-green, #51ad87);
+  font-size: 1em;
+  background: #fff;
+  min-width: 160px;
+}
+.filter-sort-container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+.filter-sort-container-filter{
+  margin-bottom: 1rem;
+  align-self: start;
+}
+@media (min-width: 769px) {
+  .filter-sort-container {
+    flex-direction: row;
+  }
+}
