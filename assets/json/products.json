@@ -10,84 +10,182 @@
     "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detrás de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del d&iacute;a. Uso externo &uacute;nicamente.",
     "imgs":[
       {
-        "img": "assets/media/products/alivio_respiratorio_roll-on.jpg",
-        "alt": "Auditor interno"
-      },
-      {
-        "img": "assets/media/products/alivio_respiratorio_roll-on.jpg",
-        "alt": "Otra vista del producto"
+        "img": "assets/media/products/coleccion_bienestar/alivio_espiratorio_roll-on-min.jpg",
+        "alt": "Alivio Respiratorio roll-on"
       }
     ], 
-    "cost": "₡8290",
+    "cost": "₡7590",
     "date": "2025/10/05",
     "onStock": true
   },
   {
-    "name": "Alivio Respiratorio roll-on",
+    "name": "Equilibrio Interno roll-on",
     "category": "essences",
     "collection": "Colecci&oacute;n Bienestar",
-    "shortName": "Alivio Respiratorio",
-    "shortDescription": "Alivio para la congestión y sensación de opresi&oacute;n",
-    "description": "Un aroma fresco-herbal con toques bals&aacute;micos y c&iacute;tricos que combina potencia energizante con un fondo suave y equilibrado. Descongestiona y mejora la respiraci&oacute;n, alivia la presi&oacute;n en pecho y cabeza, refresca y despeja la mente manteniendo la energ&iacute;a, y reduce la irritaci&oacute;n y el malestar propios de resfriados o alergias, brindando una sensaci&oacute;n limpia, reconfortante y revitalizante.",
+    "shortName": "Equilibrio Interno",
+    "shortDescription": "Aromaterapia contra n&aacute;useas, mareos y llenura",
+    "description": "Un aroma fresco-frutal chispeante que combina energ&iacute;a revitalizante con notas dulces y ligeras para aportar equilibrio y bienestar. Refresca y alivia la sensación de llenura, reduce n&aacute;useas, mareos y malestar estomacal, relaja la tensi&oacute;n nerviosa asociada y brinda una sensaci&oacute;n inmediata de frescura, calma y ligereza revitalizante.",
     "type": "Roll-on para aplicar aromaterapia en la piel",
     "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detrás de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del d&iacute;a. Uso externo &uacute;nicamente.",
     "imgs":[
       {
-        "img": "assets/media/products/alivio_respiratorio_roll-on.jpg",
-        "alt": "Auditor interno"
-      },
-      {
-        "img": "assets/media/products/alivio_respiratorio_roll-on.jpg",
-        "alt": "Otra vista del producto"
+        "img": "assets/media/products/coleccion_bienestar/equilibrio_interno-min.jpg",
+        "alt": "Equilibrio Interno roll-on"
       }
     ], 
-    "cost": "₡8290",
+    "cost": "₡7590",
     "date": "2025/10/05",
     "onStock": true
   },
   {
-    "name": "Alivio Respiratorio roll-on",
+    "name": "Frescura Mental roll-on",
     "category": "essences",
     "collection": "Colecci&oacute;n Bienestar",
-    "shortName": "Alivio Respiratorio",
-    "shortDescription": "Alivio para la congestión y sensación de opresi&oacute;n",
-    "description": "Un aroma fresco-herbal con toques bals&aacute;micos y c&iacute;tricos que combina potencia energizante con un fondo suave y equilibrado. Descongestiona y mejora la respiraci&oacute;n, alivia la presi&oacute;n en pecho y cabeza, refresca y despeja la mente manteniendo la energ&iacute;a, y reduce la irritaci&oacute;n y el malestar propios de resfriados o alergias, brindando una sensaci&oacute;n limpia, reconfortante y revitalizante.",
+    "shortName": "Frescura Mental",
+    "shortDescription": "Contra la Migraña & Dolores de Cabeza",
+    "description": "Un aroma fresco y herbal con un fondo suave y amaderado que transmite limpieza, alivio y frescura inmediata. Ayuda a calmar migrañas y dolores de cabeza por tensi&oacute;n, refresca y despeja la mente con su efecto fr&iacute;o, relaja m&uacute;sculos y nervios, disminuye la congestión y la pesadez mental, y aporta equilibrio emocional para reducir la irritabilidad y el estrés que intensifican el dolor.",
     "type": "Roll-on para aplicar aromaterapia en la piel",
-    "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detrás de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del d&iacute;a. Uso externo &uacute;nicamente.",
+    "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detrás de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del día. Uso externo únicamente.",
     "imgs":[
       {
-        "img": "assets/media/products/alivio_respiratorio_roll-on.jpg",
-        "alt": "Auditor interno"
-      },
-      {
-        "img": "assets/media/products/alivio_respiratorio_roll-on.jpg",
-        "alt": "Otra vista del producto"
+        "img": "assets/media/products/coleccion_bienestar/frescura_mental roll-on-min.jpg",
+        "alt": "Frescura Mental roll-on"
       }
     ], 
-    "cost": "₡8290",
+    "cost": "₡7590",
     "date": "2025/10/05",
     "onStock": true
   },
   {
-    "name": "Alivio Respiratorio roll-on",
+    "name": "Impulso Vital gotero",
     "category": "essences",
     "collection": "Colecci&oacute;n Bienestar",
-    "shortName": "Alivio Respiratorio",
-    "shortDescription": "Alivio para la congestión y sensación de opresi&oacute;n",
-    "description": "Un aroma fresco-herbal con toques bals&aacute;micos y c&iacute;tricos que combina potencia energizante con un fondo suave y equilibrado. Descongestiona y mejora la respiraci&oacute;n, alivia la presi&oacute;n en pecho y cabeza, refresca y despeja la mente manteniendo la energ&iacute;a, y reduce la irritaci&oacute;n y el malestar propios de resfriados o alergias, brindando una sensaci&oacute;n limpia, reconfortante y revitalizante.",
+    "shortName": "Impulso Vital",
+    "shortDescription": "Energizante & Concentración Total",
+    "description": "Un aroma fresco herbal-cítrico con matices frutales y un fondo cálido, que evoca el aire limpio de la mañana con un sutil toque dulce. Brillante, equilibrado y revitalizante, despeja la mente, combate la fatiga y eleva el ánimo. Favorece la concentración y la claridad mental, al tiempo que motiva y transmite bienestar, siendo ideal para trabajar, estudiar o enfrentar momentos de cansancio.",
+    "type": "Goteros de aceites esenciales de aromaterapia para quemador o difusor",
+    "useMode": "<u>Uso en Quemador:</u> Agrega de 5 a 10 gotas directamente en la parte superior del quemador con agua caliente o vela encendida. El aceite se libera al calentarse y llena el espacio con su aroma. Listo para usar. No requiere dilución previa.<br/><u>Uso en Difusor</u>: Agrega de 5 a 10 gotas por cada 100 mL de agua en tu difusor ultrasónico o humidificador. El vapor aromático se dispersa suavemente, creando un ambiente relajante o revitalizante según el aroma elegido. Debe diluirse siempre en agua.",
+    "imgs":[
+      {
+        "img": "assets/media/products/coleccion_bienestar/impulso_vital_gotero-min.jpg",
+        "alt": "Impulso Vital gotero"
+      }
+    ], 
+    "cost": "₡4890",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Impulso Vital roll-on",
+    "category": "essences",
+    "collection": "Colecci&oacute;n Bienestar",
+    "shortName": "Impulso Vital",
+    "shortDescription": "Energizante & Concentración Total",
+    "description": "Un aroma fresco herbal-cítrico con matices frutales y un fondo cálido, que evoca el aire limpio de la mañana con un sutil toque dulce. Brillante, equilibrado y revitalizante, despeja la mente, combate la fatiga y eleva el ánimo. Favorece la concentración y la claridad mental, al tiempo que motiva y transmite bienestar, siendo ideal para trabajar, estudiar o enfrentar momentos de cansancio.",
+    "type": "Roll-on para aplicar aromaterapia en la piel",
+    "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detrás de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del día. Uso externo únicamente.",
+    "imgs":[
+      {
+        "img": "assets/media/products/coleccion_bienestar/impulso_vital_roll-on-min.jpg",
+        "alt": "Impulso Vital roll-on"
+      }
+    ], 
+    "cost": "₡7590",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Mente Serena roll-on",
+    "category": "essences",
+    "collection": "Colecci&oacute;n Bienestar",
+    "shortName": "Mente Serena",
+    "shortDescription": "Anti-Ansiedad & Calma Activa",
+    "description": "Un aroma floral-frutal con un fondo amaderado fresco que evoca una calma luminosa, suave y delicada, con un toque verde revitalizante. Ayuda a reducir la ansiedad, equilibrar las emociones y aliviar la tensión nerviosa, promoviendo claridad y serenidad sin inducir sueño. Refresca cuerpo y mente, generando un estado de calma alegre y activa, ideal para el día.",
     "type": "Roll-on para aplicar aromaterapia en la piel",
     "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detrás de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del d&iacute;a. Uso externo &uacute;nicamente.",
     "imgs":[
       {
-        "img": "assets/media/products/alivio_respiratorio_roll-on.jpg",
-        "alt": "Auditor interno"
-      },
-      {
-        "img": "assets/media/products/alivio_respiratorio_roll-on.jpg",
-        "alt": "Otra vista del producto"
+        "img": "assets/media/products/coleccion_bienestar/mente_serena_roll-on-min.jpg",
+        "alt": "Mente Serena roll-on"
       }
     ], 
-    "cost": "₡8290",
+    "cost": "₡7590",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Mente Serena gotero",
+    "category": "essences",
+    "collection": "Colecci&oacute;n Bienestar",
+    "shortName": "Mente Serena",
+    "shortDescription": "Anti-Ansiedad & Calma Activa",
+    "description": "Un aroma floral-frutal con un fondo amaderado fresco que evoca una calma luminosa, suave y delicada, con un toque verde revitalizante. Ayuda a reducir la ansiedad, equilibrar las emociones y aliviar la tensión nerviosa, promoviendo claridad y serenidad sin inducir sueño. Refresca cuerpo y mente, generando un estado de calma alegre y activa, ideal para el día.",
+    "type": "Goteros de aceites esenciales de aromaterapia para quemador o difusor",
+    "useMode": "<u>Uso en Quemador:</u> Agrega de 5 a 10 gotas directamente en la parte superior del quemador con agua caliente o vela encendida. El aceite se libera al calentarse y llena el espacio con su aroma. Listo para usar. No requiere dilución previa.<br/><u>Uso en Difusor</u>: Agrega de 5 a 10 gotas por cada 100 mL de agua en tu difusor ultrasónico o humidificador. El vapor aromático se dispersa suavemente, creando un ambiente relajante o revitalizante según el aroma elegido. Debe diluirse siempre en agua.",
+    "imgs":[
+      {
+        "img": "assets/media/products/coleccion_bienestar/mente_serena_gotero-min.jpg",
+        "alt": "Mente Serena gotero"
+      }
+    ], 
+    "cost": "₡4890",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Sueño Profundo gotero",
+    "category": "essences",
+    "collection": "Colecci&oacute;n Bienestar",
+    "shortName": "Sueño Profundo",
+    "shortDescription": "Descanso Reparador",
+    "description": "Un aroma floral-amaderado con notas frescas y dulces que transmite serenidad y armonía, como un abrazo nocturno cálido y ligero. Relaja cuerpo y mente, ayuda a reducir el estrés y la tensión nerviosa, calma pensamientos acelerados y facilita conciliar el sueño de forma natural, favoreciendo un descanso profundo y reparador.",
+    "type": "Goteros de aceites esenciales de aromaterapia para quemador o difusor",
+    "useMode": "<u>Uso en Quemador:</u> Agrega de 5 a 10 gotas directamente en la parte superior del quemador con agua caliente o vela encendida. El aceite se libera al calentarse y llena el espacio con su aroma. Listo para usar. No requiere dilución previa.<br/><u>Uso en Difusor</u>: Agrega de 5 a 10 gotas por cada 100 mL de agua en tu difusor ultrasónico o humidificador. El vapor aromático se dispersa suavemente, creando un ambiente relajante o revitalizante según el aroma elegido. Debe diluirse siempre en agua.",
+    "imgs":[
+      {
+        "img": "assets/media/products/coleccion_bienestar/sueño_profundo_gotero-min.jpg",
+        "alt": "Sueño Profundo gotero"
+      }
+    ], 
+    "cost": "₡4890",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Sueño Profundo roll-on",
+    "category": "essences",
+    "collection": "Colecci&oacute;n Bienestar",
+    "shortName": "Sueño Profundo",
+    "shortDescription": "Descanso Reparador",
+    "description": "Un aroma floral-amaderado con notas frescas y dulces que transmite serenidad y armonía, como un abrazo nocturno cálido y ligero. Relaja cuerpo y mente, ayuda a reducir el estrés y la tensión nerviosa, calma pensamientos acelerados y facilita conciliar el sueño de forma natural, favoreciendo un descanso profundo y reparador.",
+    "type": "Roll-on para aplicar aromaterapia en la piel",
+    "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detrás de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del d&iacute;a. Uso externo &uacute;nicamente.",
+    "imgs":[
+      {
+        "img": "assets/media/products/coleccion_bienestar/sueño_profundo_roll-on-min.jpg",
+        "alt": "Sueño Profundo roll-on"
+      }
+    ], 
+    "cost": "₡7590",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Músculos Libres",
+    "category": "essences",
+    "collection": "Colecci&oacute;n Bienestar",
+    "shortName": "Músculos Libres",
+    "shortDescription": "Sinergia Relajación & Alivio Profundo",
+    "description": "Este producto ofrece alivio natural de tensiones, ayudando a calmar dolores musculares con un efecto frío-calor balanceado que reduce la inflamación y favorece la circulación. Relaja el cuerpo y la mente sin provocar somnolencia, por lo que es ideal tanto de día como de noche. Su aroma herbal fresco con suaves toques amaderados transmite frescura, equilibrio y una cálida sensación de bienestar armonioso.",
+    "type": "Aceites de aromaterapia para masajes",
+    "useMode": "Aplica una pequeña cantidad de aceite en las manos y frótalas para calentarlo. Luego masajea suavemente sobre la piel limpia y seca, con movimientos circulares o de barrido. Ideal para relajar músculos, aliviar tensión y disfrutar de una experiencia sensorial aromática. Evita el contacto con ojos y mucosas. Uso externo únicamente.",
+    "imgs":[
+      {
+        "img": "assets/media/products/coleccion_bienestar/musculos_libres_masajes-min.jpg",
+        "alt": "Aceite para masajes Músculos Libres"
+      }
+    ], 
+    "cost": "₡14390",
     "date": "2025/10/05",
     "onStock": true
   }
