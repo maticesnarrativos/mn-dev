@@ -69,12 +69,48 @@
       <section  class="main-section">
         <div class="home-main-container">
           <div class="expl-section">
-            <div class="expl-section-highlight"></div>
-            <div class="expl-section-carousel swipper"></div>
-          </div>
-            <div class="products-grid">
-              <!-- Products will be loaded here dynamically -->
+            <div class="expl-section-highlight">
+              <img
+                src="assets/media/banners/gran_rifa.jpeg"
+                alt="Colleci&oacute;n Bienestar"
+                title="Colleci&oacute;n Bienestar"/>
             </div>
+            <!-- -------------------------Swiper start----------------------------------- -->
+            <div class="expl-section-carousel swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="swiper-slide--card">
+                    <button onclick="window.location.href='productos/?collection=Colección+Bienestar';">
+                      <img src="assets/media/products/coleccion_bienestar/1.coleccion_bienestar-min.jpg" class="banner" alt="Banner con varios productos de la colecci&oacute;n bienestar">
+                    </button>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide--card">
+                    <button onclick="window.location.href='productos/?collection=Colección+Bienestar';">
+                      <img src="assets/media/products/coleccion_bienestar/1.coleccion_bienestar-min.jpg" class="banner" alt="Banner con varios productos de la colecci&oacute;n bienestar">
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <!-- -------------------------Swiper Ends----------------------------------- -->
+          </div>
+          <div class="home-more-info-section">
+            <h3 class="home-more-info-title">Informaci&oacute;n</h3>
+          </div>
+          <h3 class="home-main-container-title">Productos destacados del mes</h3>
+          <div class="products-grid">
+            <!-- Products will be loaded here dynamically -->
+          </div>
         </div>
       </section>
     </main>
@@ -103,8 +139,8 @@
     <!-- Importing the logic for the products grid -->
     <script src="assets/js/products.js" data-products="assets/json/highlight-products.json"></script>
 
-    <!-- Importing the logic for the pagination -->
-    <!-- <script src="./index.js"></script> -->
+    <!-- Importing the logic for the swier -->
+    <script src="assets/js/swiperSetup.js"></script>
   </body>
-
+  
 </html>

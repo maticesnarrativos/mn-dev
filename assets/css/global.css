@@ -227,6 +227,49 @@ main{
 }
 /* End modal styles */
 
+
+/* Start home styles */
+.home-main-container h3{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0 1.5rem 0;
+  text-align: left;
+  width: 90%;
+  max-width: 1440px; /* constrain container */
+  margin-left: auto;    /* center the container */
+  margin-right: auto;    /* center the container */
+}
+.expl-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.expl-section .expl-section-highlight {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.expl-section-carousel.swiper{
+  width: 100%;
+  position: relative;
+  margin-right: 0;
+}
+.expl-section .expl-section-highlight img,
+.expl-section .swiper-slide--card,
+.expl-section .swiper-slide--card button,
+.expl-section .swiper-slide--card button img{
+  max-width: 100%;
+}
+
+.expl-section-carousel .swiper-button-next:hover,
+.expl-section-carousel .swiper-button-prev:hover{
+  color: var(--primary-green);
+}
+
+/* End home styles */
+
 @media (min-width: 500px) {
   .product-modal-content {
     padding: 2rem 1.5rem 1.5rem 1.5rem;
@@ -246,9 +289,30 @@ main{
   .product-modal-body .product-usemode {
     margin: 0.5rem 5%;
   }
-  /* End modal styles */
+  /* End modal styles *//* Start home styles */
+  .expl-section{
+    max-width: 80%;
+  }
+  /* End home styles */
 }
 
+@media (min-width: 900px) {
+  /* Start home styles */
+  .expl-section{
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+  }
+  .expl-section .expl-section-highlight {
+    width: 30%;
+    margin-bottom: 0;
+  }
+  .expl-section-carousel.swiper{
+    width: 67%;
+  }
+  /* End home styles */
+}
 
 
 
