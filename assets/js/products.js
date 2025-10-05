@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
           text.innerHTML = val;
           const safeValue = text.textContent || "";
           filterValSelect.innerHTML += `<option value="${safeValue}">${safeValue}</option>`;
+          console.log(val);
         });
         filterValSelect.style.display = '';
       }
@@ -89,17 +90,47 @@ document.addEventListener("DOMContentLoaded", () => {
       function filterAndRender() {
         let filtered = allProducts.filter(p => p.onStock);
 
-        // Apply filter
+        // --- Normalize helper ---
+        function normalizeText(str) {
+          if (!str) return "";
+          const el = document.createElement('textarea');
+          el.innerHTML = str;
+          const decoded = el.value;
+          return decoded
+            .normalize("NFD") // decompose accent marks
+            .replace(/[\u0300-\u036f]/g, "") // remove them
+            .trim()
+            .toLowerCase();
+        }
+
+        // Apply filter (accent-insensitive + HTML-decoded)
         if (currentFilterAttr && currentFilterVal) {
+          const target = normalizeText(currentFilterVal);
           filtered = filtered.filter(p => {
-            const val = p?.[currentFilterAttr];
-            return val && val === currentFilterVal;
+            const val = normalizeText(p?.[currentFilterAttr]);
+            return val && val === target;
           });
         }
 
         // Apply search
         if (currentSearch) {
-          const query = currentSearch.toLowerCase();
+          const normalizeText = (str) => {
+            if (typeof str !== "string") return "";
+            // Decode HTML entities (like &aacute;)
+            const el = document.createElement("textarea");
+            el.innerHTML = str;
+            const decoded = el.value;
+
+            // Normalize accents and remove diacritics (á -> a)
+            return decoded
+              .normalize("NFD")
+              .replace(/[\u0300-\u036f]/g, "")
+              .toLowerCase()
+              .trim();
+          };
+
+          const query = normalizeText(currentSearch);
+
           filtered = filtered.filter(product => {
             const fields = [
               product.name,
@@ -110,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
               product.typeText
             ];
             return fields.some(field =>
-              typeof field === "string" && field.toLowerCase().includes(query)
+              normalizeText(field).includes(query)
             );
           });
         }
