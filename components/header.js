@@ -3,15 +3,26 @@ class headerBar extends HTMLElement {
     super();
 
     this.attachShadow({mode:"open"});
+    this.menuOpen = false;
   }
 
   static get observedAttributes(){
-    return ["text", "link1", "link2", "link3"];
+    return [
+      "logo", "logoAlt", "logoTitle", "link1", 
+      "link2", "link2Text", 
+      "link3", "link3Text", 
+      "link4", "link4Text"];
   }
 
   attributeChangedCallback(attr, oldVal, newVal) {
-    if (attr === "text") {
-      this.text = newVal;
+    if (attr === "logo") {
+      this.logo = newVal;
+    }
+    if (attr === "logoAlt") {
+      this.logoAlt = newVal;
+    }
+    if (attr === "logoTitle") {
+      this.logoTitle = newVal;
     }
     if (attr === "link1") {
       this.link1 = newVal;
@@ -19,57 +30,50 @@ class headerBar extends HTMLElement {
     if (attr === "link2") {
       this.link2 = newVal;
     }
+    if (attr === "link2Text") {
+      this.link2Text = newVal;
+    }
     if (attr === "link3") {
       this.link3 = newVal;
+    }
+    if (attr === "link3Text") {
+      this.link3Text = newVal;
+    }
+    if (attr === "link4") {
+      this.link4 = newVal;
+    }
+    if (attr === "link4Text") {
+      this.link4Text = newVal;
     }
   }
 
   getTemplate(){ //*Esto será puro HTML
     const template = document.createElement('template');
     template.innerHTML = `
-    <header>
-      <h1>${this.text}</h1>
-      <nav>
-        <div class="big__index__container">
-          <ol class="index">
-            <li><a href="${this.link1}" title="Back to home page">Home</a></li>
-            <li><a href="${this.link2}" title="List of the different certificates and diplomas obtained">Certificates</a></li>
-            <li><a href="${this.link3}" title="Contact data">Contact</a></li>
-          </ol>
-        </div>
-
-
-        <!-- trying hamburger menu -->
-        <div id="menuToggle">
-          <!--
-          A fake / hidden checkbox is used as click reciever,
-          so you can use the :checked selector on it.
-          -->
-          <input type="checkbox" />
-          
-          <!--
-          Some spans to act as a hamburger.
-          
-          They are acting like a real hamburger,
-          not that McDonalds stuff.
-          -->
+      <header class="header">
+        <a href="${this.getAttribute("link1")}" class="iconography-link" >
+          <div class="iconography">
+            <div class="logo">
+              <img src= "${this.logo}" alt="${this.getAttribute("logoAlt")}" title="${this.getAttribute("logoTitle")}"/>
+            </div>
+            <div class="name">
+              Matices&nbsp;Narrativos
+            </div>
+          </div>
+        </a>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
-          
-          <!--
-          Too bad the menu has to be inside of the button
-          but hey, it's pure CSS magic.
-          -->
-          <ul id="menu">
-            <li><a href="${this.link1}" title="Back to home page">Home</a></li>
-            <li><a href="${this.link2}" title="List of the different certificates and diplomas obtained">Certificates</a></li>
-            <li><a href="${this.link3}" title="Contact data">Contact</a></li>
+        </button>
+        <nav>
+          <ul class="nav">
+              <li><a href="${this.getAttribute("link2")}" title="${this.getAttribute("link2Text")}">${this.getAttribute("link2Text")}</a></li>
+              <li><a href="${this.getAttribute("link3")}" title="${this.getAttribute("link3Text")}">${this.getAttribute("link3Text")}</a></li>
+              <li><a href="${this.getAttribute("link4")}" title="${this.getAttribute("link4Text")}">${this.getAttribute("link4Text")}</a></li>
           </ul>
-        </div>
-
-      </nav>
-    </header>
+        </nav>
+      </header>
       ${this.getStyles()} <!---Aplicamos los estilos--->
     `;
     return template;
@@ -79,240 +83,168 @@ class headerBar extends HTMLElement {
   getStyles() {
     return `
       <style>
-      :root {
-        --listFontColor: rgb(169, 221, 185);
-        --textFontSize: 2.0rem;
-        --littleTextFontSize: 1.5rem;
-      }
-
       * {
-        font-family: Arial, Helvetica, sans-serif;
-        box-sizing: border-box; /* important responsive feature (padding and border) */
+        font-family: Roboto, Helvetica, sans-serif;
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
-
-      header {
-        border: 5px ridge rgb(70, 68, 107);
-        background: linear-gradient(90deg, rgba(15,137,162,1) 25%, rgba(6,44,94,1) 50%, rgba(11,6,98,1) 75%);
-        position: sticky;
-        top: 0; /* Position the navbar at the top of the page */
-        width: 100%; /* Full width */
-        padding: 0 10px;
-        min-height: 1vh;
-        z-index: 999; /*le da prioridad para que este siempre al frente*/
+      /* All the color must be defined here */
+      @media (prefers-color-scheme: dark) {
+        header.header{
+          background-color: var(--primary-background-color-dark);
+          color: var(--primary-text-color-dark);
+        }
+        a{
+          color: var(--primary-text-color-dark);
+        }
+      }
+      @media (prefers-color-scheme: light) {
+        header.header{
+          background-color: var(--primary-background-color-light);
+          color: var(--primary-text-color-light);
+        }
+        a{
+          color: var(--primary-text-color-light);
+        }
+      }
+      header.header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1em 5%;
+        min-height: 80px;
+        max-height: var(--header-height);
+        position: relative;
+      }
+      header.header .iconography {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-between;
       }
-
-      a, a:hover, a:focus, a:active {
+      header.header .iconography-link{
         text-decoration: none;
-        color: inherit;
       }
-
-      .big__index__container {
-        display: none;
+      header.header .iconography div:first-child {
+        margin-right: 5%;
       }
-
-      /* hamburger menu styles */
-      #menuToggle
-      {
-        display: block;
-        position: relative;
-        
-        z-index: 1;
-        
-        -webkit-user-select: none;
-        user-select: none;
-      }
-
-      #menuToggle a
-      {
+      header.header .iconography .logo,
+      header.header .iconography .name{
+        height: 100%;
+        width: auto;
         text-decoration: none;
+      }
+      header.header .iconography .name{
+        color: var(--primary-green);
+        font-size: 1.5rem;
+        font-family: 'Roboto Slab', serif;
+      }
+      header.header .iconography .logo img{
+        max-height: calc(var(--header-height) - 20px);
+      }
+      header.header nav{
+        /* margin-right: 5%; */
+      }
+      header.header nav .nav {
+        display: flex;
         list-style: none;
-        cursor: pointer;
-        font-size: 2rem;
-        color: white;
-        
-        transition: color 0.3s ease;
       }
-
-      #menuToggle a:hover
-      {
-        color: tomato;
+      header.header nav .nav li a{
+        font-size: 1rem;
+        text-decoration: none;
+        padding: 8px 19px;
       }
-
-
-      #menuToggle input
-      {
-        display: block;
-        width: 40px;
-        height: 32px;
-        position: absolute;
-        top: -7px;
-        left: -5px;
-        
-        cursor: pointer;
-        
-        opacity: 0; /* hide this */
-        z-index: 2; /* and place it over the hamburger */
-        
-        -webkit-touch-callout: none;
+      header.header nav .nav li a:hover{
+        background-color: var(--primary-green);
+        border-radius: 30px;
+        box-shadow: -5px 5px 3px var(--secondary-green);
+        transition: all .2s linear;
       }
-
-      /*
-      * Just a quick hamburger
-      */
-      #menuToggle span
-      {
-        display: block;
-        width: 33px;
-        height: 4px;
-        margin-bottom: 5px;
-        position: relative;
-        
-        background: #cdcdcd;
-        border-radius: 3px;
-        
-        z-index: 1;
-        
-        transform-origin: 4px 0px;
-        
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    opacity 0.55s ease;
-      }
-
-      #menuToggle span:first-child
-      {
-        transform-origin: 0% 0%;
-      }
-
-      #menuToggle span:nth-last-child(2)
-      {
-        transform-origin: 0% 100%;
-      }
-
-      /* 
-      * Transform all the slices of hamburger
-      * into a crossmark.
-      */
-      #menuToggle input:checked ~ span
-      {
-        opacity: 1;
-        transform: rotate(45deg) translate(-2px, -1px);
-        background: #232323;
-      }
-
-      /*
-      * But let's hide the middle one.
-      */
-      #menuToggle input:checked ~ span:nth-last-child(3)
-      {
-        opacity: 0;
-        transform: rotate(0deg) scale(0.2, 0.2);
-      }
-
-      /*
-      * Ohyeah and the last one should go the other direction
-      */
-      #menuToggle input:checked ~ span:nth-last-child(2)
-      {
-        transform: rotate(-45deg) translate(0, -1px);
-      }
-
-      /*
-      * Make this absolute positioned
-      * at the top right of the screen
-      */
-      #menu
-      {
-        position: absolute;
-        /* margin: -100px 0 0 -50px; */
-        width: 150px;
-        margin: 8px 0 0 -100px; /* position of the menu container */
-        padding: 15px;
+      .hamburger {
         display: none;
-        
-        background: #ededed6b;
-        list-style-type: none;
-        -webkit-font-smoothing: antialiased;
-        /* to stop flickering of text in safari */
-        
-        transform-origin: 0% 0%;
-        transform: translate(100%, 0);
-        
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+        position: relative;
       }
-
-      #menu li
-      {
-        padding: 5px 0;
-        font-size: 22px;
-
-      }
-
-      /*
-      * And let's slide it in from the left
-      */
-      #menuToggle input:checked ~ ul
-      {
-        transform: none;
+      .hamburger span {
         display: block;
+        width: 28px;
+        height: 4px;
+        margin: 4px 0;
+        background: var(--primary-green);
+        border-radius: 2px;
+        transition: all 0.3s;
+        position: relative;
       }
-
-      h1 {
-        text-align: center;
-        font-size: 2.0rem;
-        color: #afcfb1;
+      /* Hamburger to X animation */
+      .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
       }
-
-      @media screen and (min-width: 600px){
-        h1 {
-          text-align: left;
-          font-size: 3.0rem;
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(10px, -10px);
+      }
+      @media (max-width: 768px) {
+        header.header nav {
+          position: absolute;
+          top: -100%;
+          right: 0;
+          left: 0;
+          background: inherit;
+          z-index: 1;
+          visibility: hidden;
         }
-      }
-
-      @media screen and (min-width: 1024px){
-        h1 {
-          font-size: 4.0rem;
-          text-align: left;
+        header.header nav .nav {
+          flex-direction: column;
+          background: inherit;
+          width: 100%;
+          overflow: hidden;
+          transition: max-height 0.3s ease;
         }
-
-        .big__index__container {
+        header.header nav.open {
+          top: 100px;
+          min-height: calc(100vh - 100px);
+          overflow: visible;
+          visibility: visible;
+          border-bottom: 1px solid var(--primary-green);
+          transform: translateX(0);
+          transition: transform .3s;
+        }
+        header.header nav .nav li{
+          padding: 15px 0;
+          font-size: 2rem;
+        }
+        header.header nav .nav li a{
+          font-size: 2rem;
+        }
+        .hamburger {
           display: flex;
         }
-
-        #menuToggle{
+      }
+      @media (max-width: 450px) {
+        header.header .iconography .name{
           display: none;
         }
-
-        .index {
-          right: 10px;
-          font-size: 20px;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-evenly;
-          color: white;
-        } 
-
-        .index li {
-          padding: 10px;
-          list-style: none;
-          text-decoration: none;
-        }
-
-        .index li:hover {
-          color: rebeccapurple;
-          transform: scale(1.2);
-        }
-
       }
-
+      @media (min-width: 769px){
+        header.header nav .nav {
+          flex-direction: row;
+        }
+        header.header nav .nav li a{
+          font-size: 1.5rem;
+          text-decoration: none;
+          padding: 8px 29px;
+        }
+      }
       </style>
     `;
   }
@@ -321,8 +253,54 @@ class headerBar extends HTMLElement {
     //Ahora para poder renderizar nuestros templates tenemos que cambiar el contexto
     //Donde agregamos nuestro template ya que lo estabamos agregando al dom global
     //Ahora debemos agregarlo en nuestro shadow dom que es otro contexto diferente
-    this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true))
+    this.shadowRoot.appendChild(this.getTemplate().content.cloneNode(true));
+    this.addHamburgerListener();
   }
+
+  addHamburgerListener() {
+  const hamburger = this.shadowRoot.querySelector('.hamburger');
+  const navList = this.shadowRoot.querySelector('nav');
+  let scrollY = 0; // store scroll position
+
+  if (hamburger && navList) {
+    const closeMenu = () => {
+      navList.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY);
+    };
+
+    const openMenu = () => {
+      scrollY = window.scrollY;
+      navList.classList.add('open');
+      hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+    };
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = navList.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+      if (isOpen) openMenu();
+      else closeMenu();
+    });
+
+    // --- ✅ Auto-close on resize ---
+    window.addEventListener('resize', () => {
+      const desktopBreakpoint = 769; // adjust to your breakpoint
+      if (window.innerWidth >= desktopBreakpoint && navList.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+  }
+}
 
   //*Esto es lo que agregará cosas al DOM
   connectedCallback(){

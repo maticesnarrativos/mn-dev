@@ -1,0 +1,61 @@
+name: "Deploy to GitHub Pages"
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run linter
+        run: npm run lint # Run your linter command here
+      - name: Lint passed
+        if: ${{ success() }}
+        run: echo "Lint passed successfully!"
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests if any exist
+        run: |
+          if ls **/*.{test,spec}.js 1> /dev/null 2>&1; then
+            echo "Test files found. Running tests..."
+            npm test
+          else
+            echo "No test files found. Skipping tests."
+          fi
+
+  deploy:
+    needs: [lint, tests]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Copy code to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages

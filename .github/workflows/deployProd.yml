@@ -1,0 +1,84 @@
+name: "Deploy to Production Repository"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run linter
+        run: npm run lint # Run your linter command here
+      - name: Lint passed
+        if: ${{ success() }}
+        run: echo "Lint passed successfully!"
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests if any exist
+        run: |
+          if ls **/*.{test,spec}.js 1> /dev/null 2>&1; then
+            echo "Test files found. Running tests..."
+            npm test
+          else
+            echo "No test files found. Skipping tests."
+          fi
+
+  deploy:
+    needs: [lint, tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current repository
+        uses: actions/checkout@v4
+
+      - name: Setup Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Clone destination repository
+        env:
+          DEST_REPO: maticesnarrativos/mn-prod
+          GH_TOKEN: ${{ secrets.DEPLOY_TOKEN }} # Personal Access Token with repo access
+        run: |
+          git clone --depth=1 https://x-access-token:${GH_TOKEN}@github.com/${DEST_REPO}.git deploy-repo
+          rsync -av --delete --exclude='.git' ./ deploy-repo/
+          # Replace robots.txt from prod folder
+          cp -f ./prod/robots.txt deploy-repo/robots.txt
+
+      - name: Commit and push changes to destination main branch
+        env:
+          DEST_REPO: maticesnarrativos/mn-prod
+          GH_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+        run: |
+          cd deploy-repo
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Deploy from source repo"
+            git push origin main
+          fi
