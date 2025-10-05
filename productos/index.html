@@ -53,7 +53,18 @@
       <section  class="main-section">
         <div class="products-main-container">
           <div class="filter-sort-container">
-            <div class="filter-sort-container-filter"></div>
+            <div class="filter-sort-container-filter">
+              <select id="filter-attribute">
+                <option value="">Filtrar por...</option>
+                <option value="category">Categoría</option>
+                <option value="collection">Colección</option>
+                <option value="type">Tipo</option>
+              </select>
+              <select id="filter-value" style="display:none;">
+                <option value="">Selecciona un valor...</option>
+              </select>
+            </div>
+            <div class="filter-sort-container-sort"></div>
             <div class="filter-sort-container-search">
               <input
                 type="search"
@@ -62,7 +73,6 @@
                 autocomplete="off"
               />
             </div>
-            <div class="filter-sort-container-sort"></div>
           </div>
             <div class="products-grid">
               <!-- Products will be loaded here dynamically -->

@@ -219,7 +219,7 @@ main{
   margin: 1rem 0 0.5rem 0;
 }
 .product-modal-body .product-description,
-.product-modal-body .product-type,
+.product-modal-body .product-typeText,
 .product-modal-body .product-use,
 .product-modal-body .product-usemode {
   margin: 0.5rem 0;
@@ -241,7 +241,7 @@ main{
     font-size: 1.3rem;
   }
   .product-modal-body .product-description,
-  .product-modal-body .product-type,
+  .product-modal-body .product-typeText,
   .product-modal-body .product-use,
   .product-modal-body .product-usemode {
     margin: 0.5rem 5%;
