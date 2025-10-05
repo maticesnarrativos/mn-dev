@@ -216,6 +216,8 @@ class headerBar extends HTMLElement {
           overflow: visible;
           visibility: visible;
           border-bottom: 1px solid var(--primary-green);
+          transform: translateX(0);
+          transition: transform .3s;
         }
         header.header nav .nav li{
           padding: 15px 0;
@@ -256,17 +258,49 @@ class headerBar extends HTMLElement {
   }
 
   addHamburgerListener() {
-    const hamburger = this.shadowRoot.querySelector('.hamburger');
-    const navList = this.shadowRoot.querySelector('nav');
-    if (hamburger && navList) {
-      hamburger.addEventListener('click', () => {
-        console.log('click');
-        const isOpen = navList.classList.toggle('open');
-        hamburger.classList.toggle('open', isOpen);
-        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-    }
+  const hamburger = this.shadowRoot.querySelector('.hamburger');
+  const navList = this.shadowRoot.querySelector('nav');
+  let scrollY = 0; // store scroll position
+
+  if (hamburger && navList) {
+    const closeMenu = () => {
+      navList.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY);
+    };
+
+    const openMenu = () => {
+      scrollY = window.scrollY;
+      navList.classList.add('open');
+      hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+    };
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = navList.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+      if (isOpen) openMenu();
+      else closeMenu();
+    });
+
+    // --- ✅ Auto-close on resize ---
+    window.addEventListener('resize', () => {
+      const desktopBreakpoint = 769; // adjust to your breakpoint
+      if (window.innerWidth >= desktopBreakpoint && navList.classList.contains('open')) {
+        closeMenu();
+      }
+    });
   }
+}
 
   //*Esto es lo que agregará cosas al DOM
   connectedCallback(){
