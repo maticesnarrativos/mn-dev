@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             <img loading="lazy" src="${item.imgs[0].img}" class="item" alt="${item.imgs[0].alt || item.name}">
             <div class="product-title">${item.name || ''}</div>
             <div class="product-collection">${item.collection || ''}</div>
-            <div class="product-cost">${item.cost || ''}</div>
+            <div class="product-cost">Precio: ${item.cost || ''}</div>
           </div>
         </div>
       `;
