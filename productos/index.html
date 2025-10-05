@@ -21,6 +21,7 @@
     <!-- responsive design patterns, mobile firts, then tablet and last dekstop,
     the best practice is to create different .css files for each one -->
     <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/products.css" >
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" >
 
     <script src="components/header.js"></script>
@@ -53,6 +54,14 @@
         <div class="products-main-container">
           <div class="filter-sort-container">
             <div class="filter-sort-container-filter"></div>
+            <div class="filter-sort-container-search">
+              <input
+                type="search"
+                id="product-search"
+                placeholder="🔍 Buscar productos..."
+                autocomplete="off"
+              />
+            </div>
             <div class="filter-sort-container-sort"></div>
           </div>
             <div class="products-grid">

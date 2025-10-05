@@ -1,0 +1,23 @@
+.filter-sort-container-search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#product-search {
+  padding: 0.6em 1.2em;
+  border: 1.5px solid var(--primary-green, #51ad87);
+  border-radius: 2em;
+  font-size: 1.05em;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(81,173,135,0.07);
+  background: #fff;
+  min-width: 220px;
+}
+
+#product-search:focus {
+  border-color: var(--primary-blue, #0870d8);
+  box-shadow: 0 4px 16px rgba(8,112,216,0.13);
+}
