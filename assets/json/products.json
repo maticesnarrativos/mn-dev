@@ -1,7 +1,7 @@
 [
   {
     "name": "Alivio Respiratorio roll-on",
-    "category": "essences",
+    "category": "Esencias",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Alivio Respiratorio",
     "shortDescription": "Alivio para la congesti&oacute;n y sensaci&oacute;n de opresi&oacute;n",
@@ -21,7 +21,7 @@
   },
   {
     "name": "Equilibrio Interno roll-on",
-    "category": "essences",
+    "category": "Esencias",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Equilibrio Interno",
     "shortDescription": "Aromaterapia contra n&aacute;useas, mareos y llenura",
@@ -41,7 +41,7 @@
   },
   {
     "name": "Frescura Mental roll-on",
-    "category": "essences",
+    "category": "Esencias",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Frescura Mental",
     "shortDescription": "Contra la Migraña & Dolores de Cabeza",
@@ -61,7 +61,7 @@
   },
   {
     "name": "Impulso Vital gotero",
-    "category": "essences",
+    "category": "Esencias",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Impulso Vital",
     "shortDescription": "Energizante & Concentraci&oacute;n Total",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Impulso Vital roll-on",
-    "category": "essences",
+    "category": "Esencias",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Impulso Vital",
     "shortDescription": "Energizante & Concentraci&oacute;n Total",
@@ -101,7 +101,7 @@
   },
   {
     "name": "Mente Serena roll-on",
-    "category": "essences",
+    "category": "Esencias",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Mente Serena",
     "shortDescription": "Anti-Ansiedad & Calma Activa",
@@ -121,7 +121,7 @@
   },
   {
     "name": "Mente Serena gotero",
-    "category": "essences",
+    "category": "Esencias",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Mente Serena",
     "shortDescription": "Anti-Ansiedad & Calma Activa",
@@ -141,7 +141,7 @@
   },
   {
     "name": "Sueño Profundo gotero",
-    "category": "essences",
+    "category": "Esencias",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Sueño Profundo",
     "shortDescription": "Descanso Reparador",
@@ -161,7 +161,7 @@
   },
   {
     "name": "Sueño Profundo roll-on",
-    "category": "essences",
+    "category": "Esencias",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Sueño Profundo",
     "shortDescription": "Descanso Reparador",
@@ -181,7 +181,7 @@
   },
   {
     "name": "M&uacute;sculos Libres",
-    "category": "essences",
+    "category": "Esencias",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "M&uacute;sculos Libres",
     "shortDescription": "Sinergia Relajaci&oacute;n & Alivio Profundo",
