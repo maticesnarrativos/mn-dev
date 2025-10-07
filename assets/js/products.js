@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentFilterAttr = "";
   let currentFilterVal = "";
   let currentSearch = "";
+  let currentSort = "";
 
    // Utility: Wait until a selector exists in the DOM
   function waitForElement(selector, callback) {
@@ -62,9 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
         filterValSelect.style.display = '';
       }
 
-      function setUrlFilter(attr, val) {
+      function setUrlFilter(attr, val, sort) {
         const params = new URLSearchParams();
         if (attr && val) params.set(attr, val);
+        if (sort) params.set('sort', sort);
         const newUrl =
           window.location.pathname +
           (params.toString() ? '?' + params.toString() : '') +
@@ -75,15 +77,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
       function getUrlFilters() {
         const params = new URLSearchParams(window.location.search);
-        let filterAttr = "", filterVal = "";
+        let filterAttr = "", filterVal = "", sort = "";
         for (const [key, value] of params.entries()) {
-          if (key && value) {
+          if (key === "sort") {
+            sort = decodeURIComponent(value.trim());
+          } else if (key && value) {
             filterAttr = decodeURIComponent(key.trim());
             filterVal = decodeURIComponent(value.trim());
             break;
           }
         }
-        return { filterAttr, filterVal };
+        return { filterAttr, filterVal, sort };
+      }
+
+      function sortProducts(products, sortValue) {
+        if (!sortValue) return products;
+        const [field, dir] = sortValue.split('-');
+        const sorted = [...products];
+        sorted.sort((a, b) => {
+          let aVal = a[field] || "";
+          let bVal = b[field] || "";
+          // For price, remove currency and parse as number
+          if (field === "cost") {
+            aVal = parseFloat((aVal + "").replace(/[^\d.]/g, "")) || 0;
+            bVal = parseFloat((bVal + "").replace(/[^\d.]/g, "")) || 0;
+          } else {
+            // Decode HTML entities and normalize for text fields
+            const decode = s => {
+              const el = document.createElement("textarea");
+              el.innerHTML = s + "";
+              return el.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            };
+            aVal = decode(aVal);
+            bVal = decode(bVal);
+          }
+          if (aVal < bVal) return dir === "asc" ? -1 : 1;
+          if (aVal > bVal) return dir === "asc" ? 1 : -1;
+          return 0;
+        });
+        return sorted;
       }
 
       // --- COMBINED FILTER + SEARCH ---
@@ -146,6 +178,9 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         }
 
+        // Sort
+        filtered = sortProducts(filtered, currentSort);
+
         renderProducts(filtered);
       }
 
@@ -157,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
           updateFilterValues(this.value);
           filterValSelect.value = "";
           currentFilterVal = "";
-          setUrlFilter(currentFilterAttr, currentFilterVal);
+          setUrlFilter(currentFilterAttr, currentFilterVal, currentSort);
           filterAndRender();
         });
       });
@@ -165,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
       waitForElement('#filter-value', (filterValSelect) => {
         filterValSelect.addEventListener('change', function() {
           currentFilterVal = this.value;
-          setUrlFilter(currentFilterAttr, currentFilterVal);
+          setUrlFilter(currentFilterAttr, currentFilterVal, currentSort);
           filterAndRender();
         });
       });
@@ -190,11 +225,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // --- URL PARAMS ---
       waitForElement('.products-grid', () => {
-        const { filterAttr, filterVal } = getUrlFilters();
+        const { filterAttr, filterVal, sort } = getUrlFilters();
         const allowedAttrs = ['category', 'collection', 'type'];
+        const filterAttrSelect = document.getElementById('filter-attribute');
+        const filterValSelect = document.getElementById('filter-value');
+        const sortSelect = document.getElementById('sort-products');
         if (filterAttr && filterVal && allowedAttrs.includes(filterAttr)) {
-          const filterAttrSelect = document.getElementById('filter-attribute');
-          const filterValSelect = document.getElementById('filter-value');
           if (filterAttrSelect && filterValSelect) {
             filterAttrSelect.value = filterAttr;
             currentFilterAttr = filterAttr;
@@ -204,85 +240,25 @@ document.addEventListener("DOMContentLoaded", () => {
             currentFilterVal = filterVal;
           }
         } else {
-          const filterValSelect = document.getElementById('filter-value');
           if (filterValSelect) filterValSelect.style.display = 'none';
+        }
+        if (sort && sortSelect) {
+          sortSelect.value = sort;
+          currentSort = sort;
         }
         filterAndRender();
       });
 
-      // --- RENDER PRODUCTS ---
-      function renderProducts(productsToShow) {
-        const grid = document.querySelector('.products-grid');
-        if (!grid) return;
-        grid.innerHTML = "";
-
-        // Modal elements
-        const modal = document.getElementById('product-modal');
-        const modalBody = modal.querySelector('.product-modal-body');
-        const modalClose = modal.querySelector('.product-modal-close');
-
-        productsToShow.forEach(product => {
-          if (!product || typeof product !== "object") return;
-          const tile = document.createElement('div');
-          tile.className = 'product-tile';
-          tile.tabIndex = 0;
-
-          let imagesHtml = '';
-          if (Array.isArray(product.imgs) && product.imgs.length > 0) {
-            imagesHtml = `
-              <div class="product-images">
-                <img loading="lazy" src="${product.imgs[0].img}" alt="${product.imgs[0].alt || product.name}">
-              </div>
-            `;
-          }
-
-          tile.innerHTML = `
-            ${imagesHtml}
-            <div class="product-title">${product.name || ''}</div>
-            <div class="product-collection">${product.collection || ''}</div>
-            <div class="product-cost">Precio: ${product.cost || ''}</div>
-          `;
-
-          tile.addEventListener('click', () => {
-            if (!modal || !modalBody) return;
-            let allImagesHtml = '';
-            if (Array.isArray(product.imgs) && product.imgs.length > 0) {
-              allImagesHtml = product.imgs.map(imgObj =>
-                `<img src="${imgObj.img}" alt="${imgObj.alt || product.name}">`
-              ).join('');
-            }
-            modalBody.innerHTML = `
-              <div class="product-title">${product.shortName || ''}</div>
-              <div class="product-shortDescription">${product.shortDescription || ''}</div>
-              <div class="product-images">${allImagesHtml}</div>
-              <div class="product-description">${product.description || ''}</div>
-              <div class="product-typeText"><strong>${product.typeText || ''}</strong></div>
-              <div class="product-use"><strong>Modo de uso:</strong></div>
-              <div class="product-usemode">${product.useMode || ''}</div>
-            `;
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-          });
-          grid.appendChild(tile);
+      waitForElement('#sort-products', (sortSelect) => {
+        sortSelect.addEventListener('change', function() {
+          currentSort = this.value;
+          setUrlFilter(currentFilterAttr, currentFilterVal, currentSort);
+          filterAndRender();
         });
+      });
 
-        // Modal close logic
-        if (modal && modalClose && !modalClose.hasListener) {
-          modalClose.addEventListener('click', closeModal);
-          modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-          });
-          document.addEventListener('keydown', (e) => {
-            if (modal.style.display === 'flex' && e.key === 'Escape') closeModal();
-          });
-          modalClose.hasListener = true;
-        }
-        function closeModal() {
-          if (!modal) return;
-          modal.style.display = 'none';
-          document.body.style.overflow = '';
-        }
-      }
+      // --- RENDER PRODUCTS ---
+      window.renderProducts(filtered);
     })
     .catch(err => {
       console.error("Error loading products:", err);
