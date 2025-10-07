@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentFilterAttr = "";
   let currentFilterVal = "";
   let currentSearch = "";
+  let currentSort = "";
 
    // Utility: Wait until a selector exists in the DOM
   function waitForElement(selector, callback) {
@@ -62,9 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
         filterValSelect.style.display = '';
       }
 
-      function setUrlFilter(attr, val) {
+      function setUrlFilter(attr, val, sort) {
         const params = new URLSearchParams();
         if (attr && val) params.set(attr, val);
+        if (sort) params.set('sort', sort);
         const newUrl =
           window.location.pathname +
           (params.toString() ? '?' + params.toString() : '') +
@@ -75,15 +77,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
       function getUrlFilters() {
         const params = new URLSearchParams(window.location.search);
-        let filterAttr = "", filterVal = "";
+        let filterAttr = "", filterVal = "", sort = "";
         for (const [key, value] of params.entries()) {
-          if (key && value) {
+          if (key === "sort") {
+            sort = decodeURIComponent(value.trim());
+          } else if (key && value) {
             filterAttr = decodeURIComponent(key.trim());
             filterVal = decodeURIComponent(value.trim());
             break;
           }
         }
-        return { filterAttr, filterVal };
+        return { filterAttr, filterVal, sort };
+      }
+
+      function sortProducts(products, sortValue) {
+        if (!sortValue) return products;
+        const [field, dir] = sortValue.split('-');
+        const sorted = [...products];
+        sorted.sort((a, b) => {
+          let aVal = a[field] || "";
+          let bVal = b[field] || "";
+          // For price, remove currency and parse as number
+          if (field === "cost") {
+            aVal = parseFloat((aVal + "").replace(/[^\d.]/g, "")) || 0;
+            bVal = parseFloat((bVal + "").replace(/[^\d.]/g, "")) || 0;
+          } else {
+            // Decode HTML entities and normalize for text fields
+            const decode = s => {
+              const el = document.createElement("textarea");
+              el.innerHTML = s + "";
+              return el.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            };
+            aVal = decode(aVal);
+            bVal = decode(bVal);
+          }
+          if (aVal < bVal) return dir === "asc" ? -1 : 1;
+          if (aVal > bVal) return dir === "asc" ? 1 : -1;
+          return 0;
+        });
+        return sorted;
       }
 
       // --- COMBINED FILTER + SEARCH ---
@@ -146,6 +178,9 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         }
 
+        // Sort
+        filtered = sortProducts(filtered, currentSort);
+
         renderProducts(filtered);
       }
 
@@ -157,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
           updateFilterValues(this.value);
           filterValSelect.value = "";
           currentFilterVal = "";
-          setUrlFilter(currentFilterAttr, currentFilterVal);
+          setUrlFilter(currentFilterAttr, currentFilterVal, currentSort);
           filterAndRender();
         });
       });
@@ -165,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
       waitForElement('#filter-value', (filterValSelect) => {
         filterValSelect.addEventListener('change', function() {
           currentFilterVal = this.value;
-          setUrlFilter(currentFilterAttr, currentFilterVal);
+          setUrlFilter(currentFilterAttr, currentFilterVal, currentSort);
           filterAndRender();
         });
       });
@@ -190,11 +225,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // --- URL PARAMS ---
       waitForElement('.products-grid', () => {
-        const { filterAttr, filterVal } = getUrlFilters();
+        const { filterAttr, filterVal, sort } = getUrlFilters();
         const allowedAttrs = ['category', 'collection', 'type'];
+        const filterAttrSelect = document.getElementById('filter-attribute');
+        const filterValSelect = document.getElementById('filter-value');
+        const sortSelect = document.getElementById('sort-products');
         if (filterAttr && filterVal && allowedAttrs.includes(filterAttr)) {
-          const filterAttrSelect = document.getElementById('filter-attribute');
-          const filterValSelect = document.getElementById('filter-value');
           if (filterAttrSelect && filterValSelect) {
             filterAttrSelect.value = filterAttr;
             currentFilterAttr = filterAttr;
@@ -204,10 +240,21 @@ document.addEventListener("DOMContentLoaded", () => {
             currentFilterVal = filterVal;
           }
         } else {
-          const filterValSelect = document.getElementById('filter-value');
           if (filterValSelect) filterValSelect.style.display = 'none';
         }
+        if (sort && sortSelect) {
+          sortSelect.value = sort;
+          currentSort = sort;
+        }
         filterAndRender();
+      });
+
+      waitForElement('#sort-products', (sortSelect) => {
+        sortSelect.addEventListener('change', function() {
+          currentSort = this.value;
+          setUrlFilter(currentFilterAttr, currentFilterVal, currentSort);
+          filterAndRender();
+        });
       });
 
       // --- RENDER PRODUCTS ---
