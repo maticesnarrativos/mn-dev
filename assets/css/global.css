@@ -221,9 +221,15 @@ main{
 .product-modal-body .product-description,
 .product-modal-body .product-typeText,
 .product-modal-body .product-use,
-.product-modal-body .product-usemode {
+.product-modal-body .product-usemode,
+.product-modal-body .product-cost  {
   margin: 0.5rem 0;
   text-align: left;
+}
+.product-modal-body .product-cost {
+  margin: 0.5rem 0;
+  text-align: right;
+  font-weight: 700;
 }
 /* End modal styles */
 
@@ -286,7 +292,8 @@ main{
   .product-modal-body .product-description,
   .product-modal-body .product-typeText,
   .product-modal-body .product-use,
-  .product-modal-body .product-usemode {
+  .product-modal-body .product-usemode,
+  .product-modal-body .product-cost {
     margin: 0.5rem 5%;
   }
   /* End modal styles *//* Start home styles */
