@@ -209,6 +209,9 @@ main{
   object-fit: contain;
   display: inline-block;
 }
+.product-modal-body .swiper-slide img {
+  max-height: 350px;
+}
 .product-modal-body {
   text-align: center;
   font-size: 0.75rem;

@@ -53,9 +53,6 @@
   background: #fff;
   min-width: 150px;
 }
-.swiper-slide img {
-  max-height: 350px;
-}
 @media (min-width: 1024px) {
   .filter-sort-container {
     flex-direction: row;
