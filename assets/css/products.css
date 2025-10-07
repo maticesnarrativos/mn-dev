@@ -15,13 +15,13 @@
   box-shadow: 0 4px 16px rgba(8,112,216,0.13);
 }
 .filter-sort-container-filter select {
-  margin-right: 1rem;
   padding: 0.5em 1rem;
   border-radius: 2rem;
   border: 1.5px solid var(--primary-green, #51ad87);
   font-size: 1rem;
   background: #fff;
   min-width: 160px;
+  margin-bottom: 1rem;
 }
 .filter-sort-container {
   display: flex;
@@ -33,9 +33,6 @@
   flex-direction: column;
   align-self: center;
   text-align: left;
-}
-.filter-sort-container-filter select{
-  margin-bottom: 1rem;
 }
 .search-sort-container{
   display: flex;
@@ -54,8 +51,7 @@
   border: 1.5px solid var(--primary-green, #51ad87);
   font-size: 1rem;
   background: #fff;
-  min-width: 180px;
-  margin-left: 1rem;
+  min-width: 150px;
 }
 @media (min-width: 1024px) {
   .filter-sort-container {
@@ -65,9 +61,15 @@
     flex-direction: row;
     align-items: start;
   }
+  .filter-sort-container-filter select {
+    margin-right: 1rem;
+  }
   .search-sort-container{
     flex-direction: row;
     align-items: start;
+  }
+  .filter-sort-container-sort select{
+    margin-left: 1rem;
   }
   .search-sort-container .filter-sort-container-sort{
     margin-bottom: 1rem;
