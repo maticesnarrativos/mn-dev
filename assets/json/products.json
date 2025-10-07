@@ -2,11 +2,11 @@
   {
     "name": "Alivio Respiratorio roll-on",
     "category": "Esencias",
+    "type": "roll-on",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Alivio Respiratorio",
     "shortDescription": "Alivio para la congesti&oacute;n y sensaci&oacute;n de opresi&oacute;n",
     "description": "Un aroma fresco-herbal con toques bals&aacute;micos y c&iacute;tricos que combina potencia energizante con un fondo suave y equilibrado. Descongestiona y mejora la respiraci&oacute;n, alivia la presi&oacute;n en pecho y cabeza, refresca y despeja la mente manteniendo la energ&iacute;a, y reduce la irritaci&oacute;n y el malestar propios de resfriados o alergias, brindando una sensaci&oacute;n limpia, reconfortante y revitalizante.",
-    "type": "roll-on",
     "typeText": "Roll-on para aplicar aromaterapia en la piel",
     "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detr&aacute;s de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del d&iacute;a. Uso externo &uacute;nicamente.",
     "imgs":[
@@ -22,11 +22,11 @@
   {
     "name": "Equilibrio Interno roll-on",
     "category": "Esencias",
+    "type": "roll-on",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Equilibrio Interno",
     "shortDescription": "Aromaterapia contra n&aacute;useas, mareos y llenura",
     "description": "Un aroma fresco-frutal chispeante que combina energ&iacute;a revitalizante con notas dulces y ligeras para aportar equilibrio y bienestar. Refresca y alivia la sensaci&oacute;n de llenura, reduce n&aacute;useas, mareos y malestar estomacal, relaja la tensi&oacute;n nerviosa asociada y brinda una sensaci&oacute;n inmediata de frescura, calma y ligereza revitalizante.",
-    "type": "roll-on",
     "typeText": "Roll-on para aplicar aromaterapia en la piel",
     "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detr&aacute;s de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del d&iacute;a. Uso externo &uacute;nicamente.",
     "imgs":[
@@ -42,11 +42,11 @@
   {
     "name": "Frescura Mental roll-on",
     "category": "Esencias",
+    "type": "roll-on",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Frescura Mental",
     "shortDescription": "Contra la Migraña & Dolores de Cabeza",
     "description": "Un aroma fresco y herbal con un fondo suave y amaderado que transmite limpieza, alivio y frescura inmediata. Ayuda a calmar migrañas y dolores de cabeza por tensi&oacute;n, refresca y despeja la mente con su efecto fr&iacute;o, relaja m&uacute;sculos y nervios, disminuye la congesti&oacute;n y la pesadez mental, y aporta equilibrio emocional para reducir la irritabilidad y el estr&eacute;s que intensifican el dolor.",
-    "type": "roll-on",
     "typeText": "Roll-on para aplicar aromaterapia en la piel",
     "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detr&aacute;s de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del d&iacute;a. Uso externo &uacute;nicamente.",
     "imgs":[
@@ -62,11 +62,11 @@
   {
     "name": "Impulso Vital gotero",
     "category": "Esencias",
+    "type": "gotero",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Impulso Vital",
     "shortDescription": "Energizante & Concentraci&oacute;n Total",
     "description": "Un aroma fresco herbal-c&iacute;trico con matices frutales y un fondo c&aacute;lido, que evoca el aire limpio de la mañana con un sutil toque dulce. Brillante, equilibrado y revitalizante, despeja la mente, combate la fatiga y eleva el &aacute;nimo. Favorece la concentraci&oacute;n y la claridad mental, al tiempo que motiva y transmite bienestar, siendo ideal para trabajar, estudiar o enfrentar momentos de cansancio.",
-    "type": "gotero",
     "typeText": "Goteros de aceites esenciales de aromaterapia para quemador o difusor",
     "useMode": "<u>Uso en Quemador:</u> Agrega de 5 a 10 gotas directamente en la parte superior del quemador con agua caliente o vela encendida. El aceite se libera al calentarse y llena el espacio con su aroma. Listo para usar. No requiere diluci&oacute;n previa.<br/><u>Uso en Difusor</u>: Agrega de 5 a 10 gotas por cada 100 mL de agua en tu difusor ultras&oacute;nico o humidificador. El vapor arom&aacute;tico se dispersa suavemente, creando un ambiente relajante o revitalizante seg&uacute;n el aroma elegido. Debe diluirse siempre en agua.",
     "imgs":[
@@ -82,11 +82,11 @@
   {
     "name": "Impulso Vital roll-on",
     "category": "Esencias",
+    "type": "roll-on",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Impulso Vital",
     "shortDescription": "Energizante & Concentraci&oacute;n Total",
     "description": "Un aroma fresco herbal-c&iacute;trico con matices frutales y un fondo c&aacute;lido, que evoca el aire limpio de la mañana con un sutil toque dulce. Brillante, equilibrado y revitalizante, despeja la mente, combate la fatiga y eleva el &aacute;nimo. Favorece la concentraci&oacute;n y la claridad mental, al tiempo que motiva y transmite bienestar, siendo ideal para trabajar, estudiar o enfrentar momentos de cansancio.",
-    "type": "roll-on",
     "typeText": "Roll-on para aplicar aromaterapia en la piel",
     "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detr&aacute;s de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del d&iacute;a. Uso externo &uacute;nicamente.",
     "imgs":[
@@ -102,11 +102,11 @@
   {
     "name": "Mente Serena roll-on",
     "category": "Esencias",
+    "type": "roll-on",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Mente Serena",
     "shortDescription": "Anti-Ansiedad & Calma Activa",
     "description": "Un aroma floral-frutal con un fondo amaderado fresco que evoca una calma luminosa, suave y delicada, con un toque verde revitalizante. Ayuda a reducir la ansiedad, equilibrar las emociones y aliviar la tensi&oacute;n nerviosa, promoviendo claridad y serenidad sin inducir sueño. Refresca cuerpo y mente, generando un estado de calma alegre y activa, ideal para el d&iacute;a.",
-    "type": "roll-on",
     "typeText": "Roll-on para aplicar aromaterapia en la piel",
     "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detr&aacute;s de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del d&iacute;a. Uso externo &uacute;nicamente.",
     "imgs":[
@@ -122,11 +122,11 @@
   {
     "name": "Mente Serena gotero",
     "category": "Esencias",
+    "type": "gotero",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Mente Serena",
     "shortDescription": "Anti-Ansiedad & Calma Activa",
     "description": "Un aroma floral-frutal con un fondo amaderado fresco que evoca una calma luminosa, suave y delicada, con un toque verde revitalizante. Ayuda a reducir la ansiedad, equilibrar las emociones y aliviar la tensi&oacute;n nerviosa, promoviendo claridad y serenidad sin inducir sueño. Refresca cuerpo y mente, generando un estado de calma alegre y activa, ideal para el d&iacute;a.",
-    "type": "gotero",
     "typeText": "Goteros de aceites esenciales de aromaterapia para quemador o difusor",
     "useMode": "<u>Uso en Quemador:</u> Agrega de 5 a 10 gotas directamente en la parte superior del quemador con agua caliente o vela encendida. El aceite se libera al calentarse y llena el espacio con su aroma. Listo para usar. No requiere diluci&oacute;n previa.<br/><u>Uso en Difusor</u>: Agrega de 5 a 10 gotas por cada 100 mL de agua en tu difusor ultras&oacute;nico o humidificador. El vapor arom&aacute;tico se dispersa suavemente, creando un ambiente relajante o revitalizante seg&uacute;n el aroma elegido. Debe diluirse siempre en agua.",
     "imgs":[
@@ -142,11 +142,11 @@
   {
     "name": "Sueño Profundo gotero",
     "category": "Esencias",
+    "type": "gotero",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Sueño Profundo",
     "shortDescription": "Descanso Reparador",
     "description": "Un aroma floral-amaderado con notas frescas y dulces que transmite serenidad y armon&iacute;a, como un abrazo nocturno c&aacute;lido y ligero. Relaja cuerpo y mente, ayuda a reducir el estr&eacute;s y la tensi&oacute;n nerviosa, calma pensamientos acelerados y facilita conciliar el sueño de forma natural, favoreciendo un descanso profundo y reparador.",
-    "type": "gotero",
     "typeText": "Goteros de aceites esenciales de aromaterapia para quemador o difusor",
     "useMode": "<u>Uso en Quemador:</u> Agrega de 5 a 10 gotas directamente en la parte superior del quemador con agua caliente o vela encendida. El aceite se libera al calentarse y llena el espacio con su aroma. Listo para usar. No requiere diluci&oacute;n previa.<br/><u>Uso en Difusor</u>: Agrega de 5 a 10 gotas por cada 100 mL de agua en tu difusor ultras&oacute;nico o humidificador. El vapor arom&aacute;tico se dispersa suavemente, creando un ambiente relajante o revitalizante seg&uacute;n el aroma elegido. Debe diluirse siempre en agua.",
     "imgs":[
@@ -162,11 +162,11 @@
   {
     "name": "Sueño Profundo roll-on",
     "category": "Esencias",
+    "type": "roll-on",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "Sueño Profundo",
     "shortDescription": "Descanso Reparador",
     "description": "Un aroma floral-amaderado con notas frescas y dulces que transmite serenidad y armon&iacute;a, como un abrazo nocturno c&aacute;lido y ligero. Relaja cuerpo y mente, ayuda a reducir el estr&eacute;s y la tensi&oacute;n nerviosa, calma pensamientos acelerados y facilita conciliar el sueño de forma natural, favoreciendo un descanso profundo y reparador.",
-    "type": "roll-on",
     "typeText": "Roll-on para aplicar aromaterapia en la piel",
     "useMode": "Aplica directamente sobre la piel en puntos clave como las sienes, muñecas, cuello o detr&aacute;s de las orejas. Inhala profundamente para potenciar su efecto. Ideal para llevar contigo y disfrutar de los beneficios de la aromaterapia en cualquier momento del d&iacute;a. Uso externo &uacute;nicamente.",
     "imgs":[
@@ -182,11 +182,11 @@
   {
     "name": "M&uacute;sculos Libres",
     "category": "Esencias",
+    "type": "aceite masaje",
     "collection": "Colecci&oacute;n Bienestar",
     "shortName": "M&uacute;sculos Libres",
     "shortDescription": "Sinergia Relajaci&oacute;n & Alivio Profundo",
     "description": "Este producto ofrece alivio natural de tensiones, ayudando a calmar dolores musculares con un efecto fr&iacute;o-calor balanceado que reduce la inflamaci&oacute;n y favorece la circulaci&oacute;n. Relaja el cuerpo y la mente sin provocar somnolencia, por lo que es ideal tanto de d&iacute;a como de noche. Su aroma herbal fresco con suaves toques amaderados transmite frescura, equilibrio y una c&aacute;lida sensaci&oacute;n de bienestar armonioso.",
-    "type": "aceite-masaje",
     "typeText": "Aceites de aromaterapia para masajes",
     "useMode": "Aplica una pequeña cantidad de aceite en las manos y fr&oacute;talas para calentarlo. Luego masajea suavemente sobre la piel limpia y seca, con movimientos circulares o de barrido. Ideal para relajar m&uacute;sculos, aliviar tensi&oacute;n y disfrutar de una experiencia sensorial arom&aacute;tica. Evita el contacto con ojos y mucosas. Uso externo &uacute;nicamente.",
     "imgs":[
@@ -196,6 +196,126 @@
       }
     ], 
     "cost": "₡14390",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Manzana difusor colgante",
+    "category": "Esencias",
+    "type": "difusor colgante",
+    "collection": "Un aroma",
+    "shortName": "Manzana",
+    "shortDescription": "",
+    "description": "El aroma de manzana es dulce, fresco y frutal, asociado con sensaciones de limpieza, tranquilidad y bienestar. En aromaterapia, puede ayudar a reducir la ansiedad y el malestar físico, así como a promover una atmósfera relajante. Estudios indican que los aromas frutales como el de manzana verde pueden disminuir la percepción del dolor (por ejemplo migrañas) y mejorar el estado de ánimo.",
+    "typeText": "Aceites de aromaterapia para carro",
+    "useMode": "Desenrosca la tapa de madera, retira el tapón interno plástico (si aplica) y vuelve a cerrar bien. Gira el frasco brevemente para que el aceite impregne la tapa. Luego, cuélgalo del retrovisor o colócalo en un lugar seguro del vehículo. La madera absorberá el aroma y lo liberará poco a poco, perfumando el interior de forma natural y constante. Renueva el aroma girando el frasco cada cierto tiempo. Uso externo únicamente.",
+    "imgs":[
+      {
+        "img": "assets/media/products/carro/carro_manzana-min.jpg",
+        "alt": "Difusor colgante Manzana"
+      }
+    ], 
+    "cost": "₡2290",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Lavanda difusor colgante",
+    "category": "Esencias",
+    "type": "difusor colgante",
+    "collection": "Un aroma",
+    "shortName": "Lavanda",
+    "shortDescription": "",
+    "description": "El aroma de la lavanda es suave, floral y calmante. En aromaterapia, es uno de los más usados por su capacidad para reducir el estrés, mejorar el sueño y relajar el sistema nervioso. Sus efectos ansiolíticos y sedantes han sido ampliamente estudiados, mostrando beneficios sobre el estado emocional y la calidad del descanso.",
+    "typeText": "Aceites de aromaterapia para carro",
+    "useMode": "Desenrosca la tapa de madera, retira el tapón interno plástico (si aplica) y vuelve a cerrar bien. Gira el frasco brevemente para que el aceite impregne la tapa. Luego, cuélgalo del retrovisor o colócalo en un lugar seguro del vehículo. La madera absorberá el aroma y lo liberará poco a poco, perfumando el interior de forma natural y constante. Renueva el aroma girando el frasco cada cierto tiempo. Uso externo únicamente.",
+    "imgs":[
+      {
+        "img": "assets/media/products/carro/carro_lavanda-min.jpg",
+        "alt": "Difusor colgante Lavanda"
+      }
+    ], 
+    "cost": "₡2290",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Citrico Amaderado difusor colgante",
+    "category": "Esencias",
+    "type": "difusor colgante",
+    "collection": "Un aroma",
+    "shortName": "Citrico Amaderado",
+    "shortDescription": "",
+    "description": "Los aromas cítrico-amaderados, son ideales para neutralizar olores desagradables como el humo del tabaco. En aromaterapia, se utilizan por sus efectos refrescantes, purificadores y equilibrantes. Las notas cítricas aportan energía y limpieza, mientras que las amaderadas ayudan a estabilizar el estado de ánimo.",
+    "typeText": "Aceites de aromaterapia para carro",
+    "useMode": "Desenrosca la tapa de madera, retira el tapón interno plástico (si aplica) y vuelve a cerrar bien. Gira el frasco brevemente para que el aceite impregne la tapa. Luego, cuélgalo del retrovisor o colócalo en un lugar seguro del vehículo. La madera absorberá el aroma y lo liberará poco a poco, perfumando el interior de forma natural y constante. Renueva el aroma girando el frasco cada cierto tiempo. Uso externo únicamente.",
+    "imgs":[
+      {
+        "img": "assets/media/products/carro/carro_citrico_amaderado-min.jpg",
+        "alt": "Difusor colgante Citrico Amaderado"
+      }
+    ], 
+    "cost": "₡2290",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Fresa difusor colgante",
+    "category": "Esencias",
+    "type": "difusor colgante",
+    "collection": "Un aroma",
+    "shortName": "Fresa",
+    "shortDescription": "",
+    "description": "El aroma a fresa es dulce y frutal, asociado con alegría y bienestar emocional. En aromaterapia, se utiliza para mejorar el estado de ánimo y crear un ambiente reconfortante. Su fragancia estimula recuerdos positivos y activa zonas del cerebro relacionadas con el placer y la memoria.",
+    "typeText": "Aceites de aromaterapia para carro",
+    "useMode": "Desenrosca la tapa de madera, retira el tapón interno plástico (si aplica) y vuelve a cerrar bien. Gira el frasco brevemente para que el aceite impregne la tapa. Luego, cuélgalo del retrovisor o colócalo en un lugar seguro del vehículo. La madera absorberá el aroma y lo liberará poco a poco, perfumando el interior de forma natural y constante. Renueva el aroma girando el frasco cada cierto tiempo. Uso externo únicamente.",
+    "imgs":[
+      {
+        "img": "assets/media/products/carro/carro_fresa-min.jpg",
+        "alt": "Difusor colgante Fresa"
+      }
+    ], 
+    "cost": "₡2290",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Menta difusor colgante",
+    "category": "Esencias",
+    "type": "difusor colgante",
+    "collection": "Un aroma",
+    "shortName": "Menta",
+    "shortDescription": "",
+    "description": "El aroma de menta es fresco, penetrante y energizante. En aromaterapia, se utiliza por su capacidad para estimular la concentración, aliviar dolores de cabeza y reducir la fatiga mental. Gracias a sus componentes como el mentol, activa regiones cerebrales asociadas con la alerta y la memoria, brindando una sensación de frescura y claridad.",
+    "typeText": "Aceites de aromaterapia para carro",
+    "useMode": "Desenrosca la tapa de madera, retira el tapón interno plástico (si aplica) y vuelve a cerrar bien. Gira el frasco brevemente para que el aceite impregne la tapa. Luego, cuélgalo del retrovisor o colócalo en un lugar seguro del vehículo. La madera absorberá el aroma y lo liberará poco a poco, perfumando el interior de forma natural y constante. Renueva el aroma girando el frasco cada cierto tiempo. Uso externo únicamente.",
+    "imgs":[
+      {
+        "img": "assets/media/products/carro/carro_menta-min.jpg",
+        "alt": "Difusor colgante Menta"
+      }
+    ], 
+    "cost": "₡2290",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Coco difusor colgante",
+    "category": "Esencias",
+    "type": "difusor colgante",
+    "collection": "Un aroma",
+    "shortName": "Coco",
+    "shortDescription": "",
+    "description": "El aroma a coco es dulce y reconfortante, asociado con sensaciones de bienestar, calma y nostalgia positiva. En aromaterapia, se emplea para promover la relajación y crear ambientes acogedores. Aromas agradables y familiares como el coco pueden activar áreas cerebrales vinculadas con la memoria y el estado de ánimo, reduciendo el estrés.",
+    "typeText": "Aceites de aromaterapia para carro",
+    "useMode": "Desenrosca la tapa de madera, retira el tapón interno plástico (si aplica) y vuelve a cerrar bien. Gira el frasco brevemente para que el aceite impregne la tapa. Luego, cuélgalo del retrovisor o colócalo en un lugar seguro del vehículo. La madera absorberá el aroma y lo liberará poco a poco, perfumando el interior de forma natural y constante. Renueva el aroma girando el frasco cada cierto tiempo. Uso externo únicamente.",
+    "imgs":[
+      {
+        "img": "assets/media/products/carro/carro_coco-min.jpg",
+        "alt": "Difusor colgante Coco"
+      }
+    ], 
+    "cost": "₡2290",
     "date": "2025/10/05",
     "onStock": true
   }
