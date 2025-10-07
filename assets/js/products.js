@@ -294,9 +294,24 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!modal || !modalBody) return;
             let allImagesHtml = '';
             if (Array.isArray(product.imgs) && product.imgs.length > 0) {
-              allImagesHtml = product.imgs.map(imgObj =>
-                `<img src="${imgObj.img}" alt="${imgObj.alt || product.name}">`
-              ).join('');
+              if(product.imgs.length == 1){
+                allImagesHtml = `<img src="${product.imgs[0].img}" alt="${product.imgs[0].alt || product.name}">`;
+              } else{
+                allImagesHtml = `
+                  <div class="swiper product-modal-swiper">
+                    <div class="swiper-wrapper">
+                      ${product.imgs.map(imgObj =>
+                        `<div class="swiper-slide">
+                          <img src="${imgObj.img}" alt="${imgObj.alt || product.name}">
+                        </div>`
+                      ).join('')}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                `;
+              }
             }
             modalBody.innerHTML = `
               <div class="product-title">${product.shortName || ''}</div>
@@ -306,9 +321,15 @@ document.addEventListener("DOMContentLoaded", () => {
               <div class="product-typeText"><strong>${product.typeText || ''}</strong></div>
               <div class="product-use"><strong>Modo de uso:</strong></div>
               <div class="product-usemode">${product.useMode || ''}</div>
+              <div class="product-cost">Precio: ${product.cost || ''}</div>
             `;
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
+
+            // Calling swiper init if multiple images
+            if (Array.isArray(product.imgs) && product.imgs.length > 1 && window.initProductModalSwiper) {
+              window.initProductModalSwiper('.product-modal-swiper');
+}
           });
           grid.appendChild(tile);
         });
