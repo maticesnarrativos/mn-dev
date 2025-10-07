@@ -318,5 +318,125 @@
     "cost": "₡2290",
     "date": "2025/10/05",
     "onStock": true
+  },
+  {
+    "name": "Manzana gotero",
+    "category": "Esencias",
+    "type": "gotero",
+    "collection": "Un aroma",
+    "shortName": "Manzana",
+    "shortDescription": "",
+    "description": "El aroma de manzana es dulce, fresco y frutal, asociado con sensaciones de limpieza, tranquilidad y bienestar. En aromaterapia, puede ayudar a reducir la ansiedad y el malestar físico, así como a promover una atmósfera relajante. Estudios indican que los aromas frutales como el de manzana verde pueden disminuir la percepción del dolor (por ejemplo migrañas) y mejorar el estado de ánimo.",
+    "typeText": "Goteros de aceites esenciales de aromaterapia para quemador o difusor",
+    "useMode": "<u>Uso en Quemador:</u> Agrega de 5 a 10 gotas directamente en la parte superior del quemador con agua caliente o vela encendida. El aceite se libera al calentarse y llena el espacio con su aroma. Listo para usar. No requiere diluci&oacute;n previa.<br/><u>Uso en Difusor</u>: Agrega de 5 a 10 gotas por cada 100 mL de agua en tu difusor ultras&oacute;nico o humidificador. El vapor arom&aacute;tico se dispersa suavemente, creando un ambiente relajante o revitalizante seg&uacute;n el aroma elegido. Debe diluirse siempre en agua.",
+    "imgs":[
+      {
+        "img": "assets/media/products/gotero/gotero_manzana-min.jpg",
+        "alt": "Gotero Manzana"
+      }
+    ], 
+    "cost": "₡4890",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Lavanda gotero",
+    "category": "Esencias",
+    "type": "gotero",
+    "collection": "Un aroma",
+    "shortName": "Lavanda",
+    "shortDescription": "",
+    "description": "El aroma de la lavanda es suave, floral y calmante. En aromaterapia, es uno de los más usados por su capacidad para reducir el estrés, mejorar el sueño y relajar el sistema nervioso. Sus efectos ansiolíticos y sedantes han sido ampliamente estudiados, mostrando beneficios sobre el estado emocional y la calidad del descanso.",
+    "typeText": "Goteros de aceites esenciales de aromaterapia para quemador o difusor",
+    "useMode": "<u>Uso en Quemador:</u> Agrega de 5 a 10 gotas directamente en la parte superior del quemador con agua caliente o vela encendida. El aceite se libera al calentarse y llena el espacio con su aroma. Listo para usar. No requiere diluci&oacute;n previa.<br/><u>Uso en Difusor</u>: Agrega de 5 a 10 gotas por cada 100 mL de agua en tu difusor ultras&oacute;nico o humidificador. El vapor arom&aacute;tico se dispersa suavemente, creando un ambiente relajante o revitalizante seg&uacute;n el aroma elegido. Debe diluirse siempre en agua.",
+    "imgs":[
+      {
+        "img": "assets/media/products/gotero/gotero_lavanda-min.jpg",
+        "alt": "Gotero Lavanda"
+      }
+    ], 
+    "cost": "₡4890",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Citrico Amaderado gotero",
+    "category": "Esencias",
+    "type": "gotero",
+    "collection": "Un aroma",
+    "shortName": "Citrico Amaderado",
+    "shortDescription": "",
+    "description": "Los aromas cítrico-amaderados, son ideales para neutralizar olores desagradables como el humo del tabaco. En aromaterapia, se utilizan por sus efectos refrescantes, purificadores y equilibrantes. Las notas cítricas aportan energía y limpieza, mientras que las amaderadas ayudan a estabilizar el estado de ánimo.",
+    "typeText": "Goteros de aceites esenciales de aromaterapia para quemador o difusor",
+    "useMode": "<u>Uso en Quemador:</u> Agrega de 5 a 10 gotas directamente en la parte superior del quemador con agua caliente o vela encendida. El aceite se libera al calentarse y llena el espacio con su aroma. Listo para usar. No requiere diluci&oacute;n previa.<br/><u>Uso en Difusor</u>: Agrega de 5 a 10 gotas por cada 100 mL de agua en tu difusor ultras&oacute;nico o humidificador. El vapor arom&aacute;tico se dispersa suavemente, creando un ambiente relajante o revitalizante seg&uacute;n el aroma elegido. Debe diluirse siempre en agua.",
+    "imgs":[
+      {
+        "img": "assets/media/products/gotero/gotero_citrico_amaderado-min.jpg",
+        "alt": "Gotero Citrico Amaderado"
+      }
+    ], 
+    "cost": "₡4890",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Fresa gotero",
+    "category": "Esencias",
+    "type": "gotero",
+    "collection": "Un aroma",
+    "shortName": "Fresa",
+    "shortDescription": "",
+    "description": "El aroma a fresa es dulce y frutal, asociado con alegría y bienestar emocional. En aromaterapia, se utiliza para mejorar el estado de ánimo y crear un ambiente reconfortante. Su fragancia estimula recuerdos positivos y activa zonas del cerebro relacionadas con el placer y la memoria.",
+    "typeText": "Goteros de aceites esenciales de aromaterapia para quemador o difusor",
+    "useMode": "<u>Uso en Quemador:</u> Agrega de 5 a 10 gotas directamente en la parte superior del quemador con agua caliente o vela encendida. El aceite se libera al calentarse y llena el espacio con su aroma. Listo para usar. No requiere diluci&oacute;n previa.<br/><u>Uso en Difusor</u>: Agrega de 5 a 10 gotas por cada 100 mL de agua en tu difusor ultras&oacute;nico o humidificador. El vapor arom&aacute;tico se dispersa suavemente, creando un ambiente relajante o revitalizante seg&uacute;n el aroma elegido. Debe diluirse siempre en agua.",
+    "imgs":[
+      {
+        "img": "assets/media/products/gotero/gotero_fresa-min.jpg",
+        "alt": "Gotero Fresa"
+      }
+    ], 
+    "cost": "₡4890",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Menta gotero",
+    "category": "Esencias",
+    "type": "gotero",
+    "collection": "Un aroma",
+    "shortName": "Menta",
+    "shortDescription": "",
+    "description": "El aroma de menta es fresco, penetrante y energizante. En aromaterapia, se utiliza por su capacidad para estimular la concentración, aliviar dolores de cabeza y reducir la fatiga mental. Gracias a sus componentes como el mentol, activa regiones cerebrales asociadas con la alerta y la memoria, brindando una sensación de frescura y claridad.",
+    "typeText": "Goteros de aceites esenciales de aromaterapia para quemador o difusor",
+    "useMode": "<u>Uso en Quemador:</u> Agrega de 5 a 10 gotas directamente en la parte superior del quemador con agua caliente o vela encendida. El aceite se libera al calentarse y llena el espacio con su aroma. Listo para usar. No requiere diluci&oacute;n previa.<br/><u>Uso en Difusor</u>: Agrega de 5 a 10 gotas por cada 100 mL de agua en tu difusor ultras&oacute;nico o humidificador. El vapor arom&aacute;tico se dispersa suavemente, creando un ambiente relajante o revitalizante seg&uacute;n el aroma elegido. Debe diluirse siempre en agua.",
+    "imgs":[
+      {
+        "img": "assets/media/products/gotero/gotero_menta-min.jpg",
+        "alt": "Gotero Menta"
+      }
+    ], 
+    "cost": "₡4890",
+    "date": "2025/10/05",
+    "onStock": true
+  },
+  {
+    "name": "Coco gotero",
+    "category": "Esencias",
+    "type": "gotero",
+    "collection": "Un aroma",
+    "shortName": "Coco",
+    "shortDescription": "",
+    "description": "El aroma a coco es dulce y reconfortante, asociado con sensaciones de bienestar, calma y nostalgia positiva. En aromaterapia, se emplea para promover la relajación y crear ambientes acogedores. Aromas agradables y familiares como el coco pueden activar áreas cerebrales vinculadas con la memoria y el estado de ánimo, reduciendo el estrés.",
+    "typeText": "Goteros de aceites esenciales de aromaterapia para quemador o difusor",
+    "useMode": "<u>Uso en Quemador:</u> Agrega de 5 a 10 gotas directamente en la parte superior del quemador con agua caliente o vela encendida. El aceite se libera al calentarse y llena el espacio con su aroma. Listo para usar. No requiere diluci&oacute;n previa.<br/><u>Uso en Difusor</u>: Agrega de 5 a 10 gotas por cada 100 mL de agua en tu difusor ultras&oacute;nico o humidificador. El vapor arom&aacute;tico se dispersa suavemente, creando un ambiente relajante o revitalizante seg&uacute;n el aroma elegido. Debe diluirse siempre en agua.",
+    "imgs":[
+      {
+        "img": "assets/media/products/gotero/gotero_coco-min.jpg",
+        "alt": "Gotero Coco"
+      }
+    ], 
+    "cost": "₡4890",
+    "date": "2025/10/05",
+    "onStock": true
   }
 ]
