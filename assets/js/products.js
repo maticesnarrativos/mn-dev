@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!Array.isArray(products)) throw new Error("Invalid product data (expected array)");
       // Get prices and merge into products before any filtering/sorting
       window.getProductsWithPrices(products).then(productsWithPrices => {
-        allProducts = productsWithPrices.filter(p => typeof p === "object" && p !== null);
+        allProducts = productsWithPrices.filter(p => typeof p === "object" && p !== null && p.onStock !== false);
 
         // --- FILTER LOGIC ---
 

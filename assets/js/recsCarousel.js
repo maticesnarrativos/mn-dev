@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Generate slides
     if (!Array.isArray(items)) throw new Error("Invalid product data (expected array)");
-      const allitems = items.filter(p => typeof p === "object" && p !== null);
+      const allitems = items.filter(p => typeof p === "object" && p !== null && p.onStock !== false);
 
     window.getProductsWithPrices(allitems).then(productsWithPrices => {
       window.renderProducts(productsWithPrices, {
