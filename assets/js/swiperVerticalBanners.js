@@ -35,10 +35,11 @@
         grabCursor: true,
         allowTouchMove: true,
         autoplay: {
-          delay: 3000,
+          delay: 5000,
         },
         pagination: {
           el: `.swiper-pagination-${swiperSufix}`,
+          type: 'progressbar',
           clickable: true,
         },
         navigation: {
