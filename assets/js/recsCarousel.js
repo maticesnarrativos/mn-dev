@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       loop: true,
       slidesPerView: 1.25,
       spaceBetween: 10,
-      centeredSlides: true,
+      centeredSlides: false,
       grabCursor: true,
       allowTouchMove: true,
       pagination: {
